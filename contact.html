@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <title>Contact Us - Craftilo Tiles</title>
+    <style>
+        /* Additional styling for the vertical form */
+        .vertical-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .vertical-form label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .vertical-form input,
+        .vertical-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .vertical-form textarea {
+            resize: vertical;
+        }
+
+        .vertical-form button {
+            padding: 0.8rem 1.5rem;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .vertical-form button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <!-- Same Navbar Section -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Craftilo Tiles Logo"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="catalogue.html">E-Catalogue</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <button class="find-tile-btn">Find Your Tile</button>
+        </div>
+    </header>
+
+    <!-- Contact Us Content Section -->
+    <section class="contact-us">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have questions about our products, need help finding a retailer, or want to share your feedback, feel free to reach out to us.</p>
+
+            <!-- Updated Fancy Form -->
+            <div class="contact-form">
+                <form class="vertical-form" action="https://submit-form.com/YYph1cyOz">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" name="first-name" type="text" required />
+
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" name="last-name" type="text" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" cols="15" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Our Office</h2>
+                <p>Craftilo Tiles Headquarters</p>
+                <p>123 Tile Avenue, Tile City, TC 56789</p>
+                <p>Email: info@craftilotiles.com</p>
+                <p>Phone: (555) 555-5555</p>
+            </div>
+        </div>
+    </section>
+    footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+            <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+        </div>
+    </div>
+</footer>
+
+<footer>
+    <footer>
+        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

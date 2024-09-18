@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Craftilo Tiles Store</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Updated the logo href to point to the homepage -->
+            <a href="index.html" class="logo"><img src="logo.png" alt="Craftilo Tiles Logo"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"></a></li> 
+                    <li><a href="catalogue.html">E-Catalogue </a></li><!-- Make sure this points to the correct homepage -->
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="where-to-buy.html">Where-To-Buy</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <button class="find-tile-btn">Find Your Tile</button>
+        </div>
+        <div class="header-content">
+            <h1>Celebrating 10 Years of Craftsmanship</h1>
+        </div>
+    </header>
+    
+
+    <!-- Tile Categories Section with Explore Links -->
+    <section class="tiles-container">
+        <div class="tiles-left">
+            <h2>Explore Our Floor Tiles</h2>
+            <div class="tile-grid">
+                <div class="tile-box">
+                    <i class="icon-living-room"></i>
+                    <h3>Living Room Floor Tiles</h3>
+                    <a href="#" class="explore-link">Explore Now</a>
+                </div>
+                <div class="tile-box">
+                    <i class="icon-bedroom"></i>
+                    <h3>Bedroom Floor Tiles</h3>
+                    <a href="#" class="explore-link">Explore Now</a>
+                </div>
+                <div class="tile-box">
+                    <i class="icon-commercial"></i>
+                    <h3>Commercial Spaces</h3>
+                    <a href="#" class="explore-link">Explore Now</a>
+                </div>
+                <div class="tile-box">
+                    <i class="icon-outdoor"></i>
+                    <h3>Outdoor Floor Tiles</h3>
+                    <a href="#" class="explore-link">Explore Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Slider/Right Section -->
+        <div class="tiles-right">
+            <h2>Explore Our Premium Tiles</h2>
+            <div class="tile-slider">
+                <img src="Screenshot 2024-09-06 112725.png" alt="Living Room Tiles">
+                <img src="Screenshot 2024-09-06 112829.png" alt="Marble Tiles">
+                <img src="Screenshot 2024-09-06 112909.png" alt="Wooden Tiles">
+            </div>
+            <a href="#" class="explore-all-btn">Explore All</a>
+        </div>
+    </section>
+
+   
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
+
+<section class="trending-products">
+    <h2 class="section-title">Trending Products</h2>
+    <div class="products-grid">
+        <div class="product">
+            <div class="product-img-container">
+                <img src="Screenshot 2024-09-06 112725.png" alt="The Ultima - 4DX">
+                <div class="product-overlay">
+                    <p>Progressive Thinking, Exceptional Design</p>
+                </div>
+            </div>
+            <h3>The Ultima - 4DX</h3>
+            <p>The 4DX Series by Kajaria Eternity makes a bold statement in modern design.</p>
+        </div>
+        <div class="product">
+            <div class="product-img-container">
+                <img src="Screenshot 2024-09-06 112829.png" alt="Gres Tough">
+                <div class="product-overlay">
+                    <p>Italian Marble Elegance Reimagined</p>
+                </div>
+            </div>
+            <h3>Gres Tough</h3>
+            <p>The Gres Tough Tiles Collection features elegant, natural Italian Marble patterns.</p>
+        </div>
+        <div class="product">
+            <div class="product-img-container">
+                <img src="Screenshot 2024-09-06 112909.png" alt="Vitronite">
+                <div class="product-overlay">
+                    <p>Modern Countertops for Elegant Kitchens</p>
+                </div>
+            </div>
+            <h3>Vitronite</h3>
+            <p>New Age modern countertops with a luxurious finish and modern design aesthetics.</p>
+        </div>
+    </div>
+</section>
+footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <footer>
+<footer>
+    <p>© 2024 Craftilo Tiles. All rights reserved.</p>
+</footer>

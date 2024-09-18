@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <title>Products - Craftilo Tiles</title>
+</head>
+<body>
+    <!-- Same Navbar Section -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Craftilo Tiles Logo"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="catalogue.html">E-Catalogue</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <button class="find-tile-btn">Find Your Tile</button>
+        </div>
+    </header>
+
+    <!-- Products Content Section -->
+    <section class="products">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Explore our extensive range of tiles designed to suit every space, style, and budget. From modern designs to classic finishes, we have something for every kind of environment.</p>
+
+            <div class="product-categories">
+                <div class="category">
+                    <img src="living-room-tiles.jpg" alt="Living Room Tiles">
+                    <h3>Living Room Tiles</h3>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <div class="category">
+                    <img src="bedroom-tiles.jpg" alt="Bedroom Tiles">
+                    <h3>Bedroom Tiles</h3>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <div class="category">
+                    <img src="commercial-tiles.jpg" alt="Commercial Tiles">
+                    <h3>Commercial Tiles</h3>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+                <div class="category">
+                    <img src="outdoor-tiles.jpg" alt="Outdoor Tiles">
+                    <h3>Outdoor Tiles</h3>
+                    <a href="#" class="explore-link">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <footer>
+        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <title>E-Catalogue - Craftilo Tiles</title>
+</head>
+<body>
+    <!-- Same Navbar Section -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Craftilo Tiles Logo"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="catalogue.html">E-Catalogue</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <button class="find-tile-btn">Find Your Tile</button>
+        </div>
+    </header>
+
+    <!-- E-Catalogue Content Section -->
+    <section class="catalogue">
+        <div class="container">
+            <h1>Download Our E-Catalogue</h1>
+            <p>Explore our latest collections, styles, and designs by downloading our E-Catalogue. Get access to a wide range of tiles, specifications, and inspiration for your projects.</p>
+
+            <div class="catalogue-section">
+                <img src="catalogue-cover.jpg" alt="Catalogue Cover">
+                <div class="catalogue-details">
+                    <h2>Craftilo Tiles 2024 Catalogue</h2>
+                    <p>Our latest catalogue offers a complete overview of our tile collections. From sleek and modern to timeless and traditional, you’ll find tiles for every space.</p>
+                    <a href="Craftilo_Tiles_2024_Catalogue.pdf" class="download-btn" download>Download Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+            <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+        </div>
+    </div>
+</footer>
+
+    <footer>
+        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
