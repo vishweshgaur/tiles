@@ -14,32 +14,34 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
     
-    <header class="fixed top-0 w-full bg-gray-900 text-white shadow-md z-50">
-        <div id="navbar-container" class="flex flex-row justify-between items-center p-5">
+    <header class="fixed top-0 w-full bg-white z-50">
+        <div class="flex flex-row flex-wrap justify-between items-center p-5">
             <div class="block items-center justify-center">
                 <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
             </div>
-            <nav class="hidden lg:flex lg:flex-row items-center space-x-6">
-                <ul class="flex space-x-6">
-                    <li><a href="#" class="text-white font-bold">Home</a></li>
-                    <li><a href="#" class="text-white font-bold">Products</a></li>
-                    <li><a href="#" class="text-white font-bold">About</a></li>
-                    <li><a href="#" class="text-white font-bold">Contact</a></li>
+            <button id="nav-btn" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <rect y="4" width="24" height="2" fill="black"></rect>
+                    <rect y="11" width="24" height="2" fill="black"></rect>
+                    <rect y="18" width="24" height="2" fill="black"></rect>
+                  </svg>
+            </button>
+            <nav id="navbar-links" class="hidden md:flex md:flex-row w-full items-center justify-center md:w-auto md:space-x-6">
+                <ul class="flex flex-col items-center justify-center md:flex-row md:space-x-6">
+                    <a href="#" class="p-2"><li>Home</li></a>
+                    <a href="#" class="p-2"><li>Products</li></a>
+                    <a href="#" class="p-2"><li>About</li></a>
+                    <a href="#" class="p-2"><li>Contact</li></a>
                 </ul>
-                <button class="bg-yellow-500 text-gray-900 px-4 py-2 font-bold">Find Your Tile</button>
             </nav>
-            <div class="hamburger md:hidden flex flex-col cursor-pointer">
-                <span class="block w-6 h-0.5 bg-white mb-1"></span>
-                <span class="block w-6 h-0.5 bg-white mb-1"></span>
-                <span class="block w-6 h-0.5 bg-white"></span>
-            </div>
+            <button class="hidden md:block bg-yellow-500 text-gray-900 px-4 py-2 font-bold">Find Your Tile</button>
+            
         </div>
     </header>
-    <!-- <script src="../javascript/navbar.js"></script>
-    <script src="../javascript/nav-script.js"></script> -->
+    <script src="../javascript/navbar.js"></script>
 
-    <div class="header-content text-center py-24 bg-cover bg-center bg-no-repeat text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('header-background.jpg');">
-        <h1 class="text-4xl font-bold">Celebrating 10 Years of Craftsmanship</h1>
+    <div class="text-center mt-24 bg-gray-600 text-white">
+        <h1 class="text-4xl py-20 font-bold">Celebrating 10 Years of Craftsmanship</h1>
     </div>
 
     <!-- Tile Categories Section with Explore Links -->
@@ -90,7 +92,7 @@
         <div class="products-grid flex flex-wrap justify-center gap-6">
             <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
                 <div class="product-img-container relative overflow-hidden">
-                    <img src="../public/Screenshot 2024-09-06 112725.png" alt="The Ultima - 4DX" class="w-full transition-transform transform hover:scale-110">
+                    <img src="../public/tileaqua.png" alt="The Ultima - 4DX" class="w-full transition-transform transform hover:scale-110">
                     <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
                         <p class="p-4">Progressive Thinking, Exceptional Design</p>
                     </div>
@@ -100,7 +102,7 @@
             </div>
             <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
                 <div class="product-img-container relative overflow-hidden">
-                    <img src="../public/Screenshot 2024-09-06 112829.png" alt="Gres Tough" class="w-full transition-transform transform hover:scale-110">
+                    <img src="../public/tilewhite.png" alt="Gres Tough" class="w-full transition-transform transform hover:scale-110">
                     <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
                         <p class="p-4">Italian Marble Elegance Reimagined</p>
                     </div>
@@ -110,7 +112,7 @@
             </div>
             <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
                 <div class="product-img-container relative overflow-hidden">
-                    <img src="../public/Screenshot 2024-09-06 112909.png" alt="Vitronite" class="w-full transition-transform transform hover:scale-110">
+                    <img src="../public/tileniqqa.png" alt="Vitronite" class="w-full transition-transform transform hover:scale-110">
                     <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
                         <p class="p-4">Modern Countertops for Elegant Kitchens</p>
                     </div>
@@ -124,10 +126,10 @@
     <footer class="bg-gray-900 text-white text-center py-6">
         <div class="footer-container flex flex-col items-center">
             <div class="social-icons flex justify-center space-x-6 mb-4">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook" class="w-6 transition-transform transform hover:scale-110"></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram" class="w-6 transition-transform transform hover:scale-110"></a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter" class="w-6 transition-transform transform hover:scale-110"></a>
-                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp" class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../public/fb.webp" alt="Facebook" class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="../public/ig.webp" alt="Instagram" class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="../public/twitter.webp" alt="Twitter" class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="../public/wp.webp" alt="WhatsApp" class="w-6 transition-transform transform hover:scale-110"></a>
             </div>
             <p class="text-sm">© 2024 Craftilo Tiles. All rights reserved.</p>
         </div>
