@@ -1,6 +1,5 @@
 const handleNav = (e) => {
     e.preventDefault();
-    console.log("Hello")
     const navlinks = document.getElementById("navbar-links")
     navlinks.classList.toggle("hidden")
 }
