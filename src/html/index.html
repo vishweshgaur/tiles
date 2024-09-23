@@ -1,230 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Craftilo Tiles Store</title>
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .ubuntu-regular {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
     </style>
     <style>
-        .dropdown-content, .sub-dropdown-content {
-            display: none;
-        }
-        .group:hover > .dropdown-content,
-        .submenu:hover > .sub-dropdown-content {
-            display: block;
-        }
+      .dropdown-content,
+      .sub-dropdown-content {
+        display: none;
+      }
+      .group:hover > .dropdown-content,
+      .submenu:hover > .sub-dropdown-content {
+        display: block;
+      }
     </style>
-</head>
-<body class="bg-gray-100 text-gray-800">
-
-<header class="fixed top-0 w-full  bg-white z-50">
-    <div class="flex flex-row flex-wrap justify-between items-center p-4">
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="fixed top-0 w-full bg-white z-50">
+      <div class="flex flex-row flex-wrap justify-between items-center p-4">
         <div class="block items-center justify-center">
-            <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
+          <a href="index.html"
+            ><img src="../public/logo.png" alt="Logo" class="w-52 h-auto"
+          /></a>
         </div>
+
         <button id="nav-btn" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <rect y="4" width="24" height="2" fill="black"></rect>
-                <rect y="11" width="24" height="2" fill="black"></rect>
-                <rect y="18" width="24" height="2" fill="black"></rect>
-            </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <rect y="4" width="24" height="2" fill="black"></rect>
+            <rect y="11" width="24" height="2" fill="black"></rect>
+            <rect y="18" width="24" height="2" fill="black"></rect>
+          </svg>
         </button>
-        <nav id="navbar-links" class="hidden md:flex md:items-center md:space-x-6">
-            <ul class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold">
-                <li class="py-3">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Home</a>
+
+        <nav
+          id="navbar-links"
+          class="hidden md:flex md:items-center md:space-x-6 ubuntu-regular"
+        >
+          <ul
+            class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold text-2xl"
+          >
+            <li class="relative p-3 group">
+              <a
+                href="#"
+                class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon"
+                >Tiles</a
+              >
+              <ul
+                class="absolute right-0 w-48 m-1 p-1 bg-white text-black shadow-lg rounded-lg dropdown-content text-base"
+              >
+                <li class="relative group submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Nano</a>
+                  <ul
+                    class="absolute left-full top-2 w-48 p-1 bg-white text-black shadow-lg rounded-lg sub-dropdown-content text-sm"
+                  >
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >24inch x 24inch</a
+                      >
+                    </li>
+                  </ul>
                 </li>
-                <li class="relative py-3 group">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon">Tiles</a>
-                    <ul class="absolute left-0 w-48 mt-3 p-3 bg-white text-black shadow-lg rounded-lg dropdown-content">
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Nano</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
-                            </ul>
-                        </li>
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Double Charged</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
-                            </ul>
-                        </li>
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Glazed Vitrified</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">48inch x 24inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">32inch x 32inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">64inch x 32inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">72inch x 48inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">80inch x 40inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">96inch x 48inch</a></li>
-                            </ul>
-                        </li>
-                        <!-- Add more categories as needed -->
-                    </ul>
+                <li class="relative group submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Double Charged</a
+                  >
+                  <ul
+                    class="absolute left-full top-2 w-48 p-1 bg-white text-black shadow-lg rounded-lg sub-dropdown-content text-sm"
+                  >
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >24inch x 24inch</a
+                      >
+                    </li>
+                  </ul>
                 </li>
-                <li class="py-3">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">About</a>
+                <li class="relative group submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Glazed Vitrified</a
+                  >
+                  <ul
+                    class="absolute left-full top-0 w-48 mt-0 p-1 bg-white text-black shadow-lg rounded-lg sub-dropdown-content text-sm"
+                  >
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >24inch x 24inch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >48inch x 24inch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >32inch x 32inch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >64inch x 32inch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >72inch x 48inch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >80inch x 40inch</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                        >96inch x 48inch</a
+                      >
+                    </li>
+                  </ul>
                 </li>
-                <li class="py-3">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Contact</a>
-                </li>
-            </ul>
+                <!-- Add more categories as needed -->
+              </ul>
+            </li>
+
+            <li class="p-3">
+              <a
+                href="#"
+                class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
+                >About</a
+              >
+            </li>
+            <li class="p-3">
+              <a
+                href="#"
+                class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </nav>
-        <button class="hidden md:block bg-[#F59E0B] text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">Find Your Tile</button>
+      </div>
+    </header>
 
+    <script src="../javascript/navbar.js"></script>
+
+    <div class="text-center mt-24 bg-gray-600 text-white">
+      <h1 class="text-4xl py-20 font-bold">
+        Celebrating 10 Years of Craftsmanship
+      </h1>
     </div>
-</header>
-<script src="../javascript/navbar.js"></script>
 
-<div class="text-center mt-24 bg-gray-600 text-white">
-    <h1 class="text-4xl py-20 font-bold">Celebrating 10 Years of Craftsmanship</h1>
-</div>
-
-<!-- Tile Categories Section with Explore Links -->
-<section class="flex flex-col md:flex-row p-12 bg-gray-200">
-    <div class="flex-1 mb-8 md:mb-0 md:mr-8">
+    <!-- Tile Categories Section with Explore Links -->
+    <section class="flex flex-col md:flex-row p-12 bg-gray-200">
+      <div class="flex-1 mb-8 md:mb-0 md:mr-8">
         <h2 class="text-2xl font-bold mb-6">Explore Our Floor Tiles</h2>
         <div class="tile-grid grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-living-room text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Living Room Floor Tiles</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-bedroom text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Bedroom Floor Tiles</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-commercial text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Commercial Spaces</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-outdoor text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Outdoor Floor Tiles</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
+          <div
+            class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
+          >
+            <i class="icon-living-room text-4xl mb-4 text-gray-900"></i>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              Living Room Floor Tiles
+            </h3>
+            <a
+              href="#"
+              class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500"
+              >Explore Now</a
+            >
+          </div>
+          <div
+            class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
+          >
+            <i class="icon-bedroom text-4xl mb-4 text-gray-900"></i>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              Bedroom Floor Tiles
+            </h3>
+            <a
+              href="#"
+              class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500"
+              >Explore Now</a
+            >
+          </div>
+          <div
+            class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
+          >
+            <i class="icon-commercial text-4xl mb-4 text-gray-900"></i>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              Commercial Spaces
+            </h3>
+            <a
+              href="#"
+              class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500"
+              >Explore Now</a
+            >
+          </div>
+          <div
+            class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg"
+          >
+            <i class="icon-outdoor text-4xl mb-4 text-gray-900"></i>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              Outdoor Floor Tiles
+            </h3>
+            <a
+              href="#"
+              class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500"
+              >Explore Now</a
+            >
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<div class="carousel-card bg-gray-200 shadow-lg rounded-lg overflow-hidden  p-4 w-full flex items-center justify-center">
-    <div class="relative w-[50%]">
-
+    <div
+      class="carousel-card bg-gray-200 shadow-lg rounded-lg overflow-hidden p-4 w-full flex items-center justify-center"
+    >
+      <div class="relative w-[50%]">
         <div class="carousel rounded-2xl overflow-hidden relative w-full">
-            <div class="flex transition-transform ease-out duration-500 rounded-2xl" id="carousel">
-                <img src="../public/tileaqua.png" class="w-full object-cover"/>
-                <img src="../public/tileniqqa.png" class="w-full object-cover"/>
-                <img src="../public/tilewhite.png" class="w-full object-cover"/>
-            </div>
+          <div
+            class="flex transition-transform ease-out duration-500 rounded-2xl"
+            id="carousel"
+          >
+            <img src="../public/tileaqua.png" class="w-full object-cover" />
+            <img src="../public/tileniqqa.png" class="w-full object-cover" />
+            <img src="../public/tilewhite.png" class="w-full object-cover" />
+          </div>
         </div>
-        <button id="prevBtn"
-                class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 flex rounded-2xl hover:bg-opacity-70">
-            &#10094;
+        <button
+          id="prevBtn"
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 flex rounded-2xl hover:bg-opacity-70"
+        >
+          &#10094;
         </button>
-        <button id="nextBtn"
-                class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 flex rounded-2xl hover:bg-opacity-70 ">
-            &#10095;
+        <button
+          id="nextBtn"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 flex rounded-2xl hover:bg-opacity-70"
+        >
+          &#10095;
         </button>
         <div class="dots flex justify-center" id="dots">
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i class="fas fa-circle"></i></span>
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i class="fas fa-circle"></i></span>
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i class="fas fa-circle"></i></span>
+          <span
+            class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"
+            ><i class="fas fa-circle"></i
+          ></span>
+          <span
+            class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"
+            ><i class="fas fa-circle"></i
+          ></span>
+          <span
+            class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"
+            ><i class="fas fa-circle"></i
+          ></span>
         </div>
+      </div>
     </div>
-</div>
 
-
-<section class="trending-products py-16 bg-gradient-to-r from-gray-100 to-gray-300 text-center text-gray-800">
-    <h2 class="section-title text-4xl font-bold font-playfair mb-12 relative inline-block">
+    <section
+      class="trending-products py-16 bg-gradient-to-r from-gray-100 to-gray-300 text-center text-gray-800"
+    >
+      <h2
+        class="section-title text-4xl font-bold font-playfair mb-12 relative inline-block"
+      >
         Trending Products
         <span class="block w-20 h-1 bg-yellow-500 mt-2 mx-auto"></span>
-    </h2>
-    <div class="products-grid flex flex-wrap justify-center gap-6">
-        <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
-            <div class="product-img-container relative overflow-hidden">
-                <img src="../public/tileaqua.png" alt="The Ultima - 4DX"
-                     class="w-full transition-transform transform hover:scale-110">
-                <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
-                    <p class="p-4">Progressive Thinking, Exceptional Design</p>
-                </div>
+      </h2>
+      <div class="products-grid flex flex-wrap justify-center gap-6">
+        <div
+          class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs"
+        >
+          <div class="product-img-container relative overflow-hidden">
+            <img
+              src="../public/tileaqua.png"
+              alt="The Ultima - 4DX"
+              class="w-full transition-transform transform hover:scale-110"
+            />
+            <div
+              class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100"
+            >
+              <p class="p-4">Progressive Thinking, Exceptional Design</p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mt-4">The Ultima - 4DX</h3>
-            <p class="text-gray-600 text-base p-4">The 4DX Series by Kajaria Eternity makes a bold statement in modern
-                design.</p>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mt-4">The Ultima - 4DX</h3>
+          <p class="text-gray-600 text-base p-4">
+            The 4DX Series by Kajaria Eternity makes a bold statement in modern
+            design.
+          </p>
         </div>
-        <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
-            <div class="product-img-container relative overflow-hidden">
-                <img src="../public/tilewhite.png" alt="Gres Tough"
-                     class="w-full transition-transform transform hover:scale-110">
-                <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
-                    <p class="p-4">Italian Marble Elegance Reimagined</p>
-                </div>
+        <div
+          class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs"
+        >
+          <div class="product-img-container relative overflow-hidden">
+            <img
+              src="../public/tilewhite.png"
+              alt="Gres Tough"
+              class="w-full transition-transform transform hover:scale-110"
+            />
+            <div
+              class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100"
+            >
+              <p class="p-4">Italian Marble Elegance Reimagined</p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mt-4">Gres Tough</h3>
-            <p class="text-gray-600 text-base p-4">The Gres Tough Tiles Collection features elegant, natural Italian
-                Marble patterns.</p>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mt-4">Gres Tough</h3>
+          <p class="text-gray-600 text-base p-4">
+            The Gres Tough Tiles Collection features elegant, natural Italian
+            Marble patterns.
+          </p>
         </div>
-        <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
-            <div class="product-img-container relative overflow-hidden">
-                <img src="../public/tileniqqa.png" alt="Vitronite"
-                     class="w-full transition-transform transform hover:scale-110">
-                <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
-                    <p class="p-4">Modern Countertops for Elegant Kitchens</p>
-                </div>
+        <div
+          class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs"
+        >
+          <div class="product-img-container relative overflow-hidden">
+            <img
+              src="../public/tileniqqa.png"
+              alt="Vitronite"
+              class="w-full transition-transform transform hover:scale-110"
+            />
+            <div
+              class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100"
+            >
+              <p class="p-4">Modern Countertops for Elegant Kitchens</p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mt-4">Vitronite</h3>
-            <p class="text-gray-600 text-base p-4">New Age modern countertops with a luxurious finish and modern design
-                aesthetics.</p>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mt-4">Vitronite</h3>
+          <p class="text-gray-600 text-base p-4">
+            New Age modern countertops with a luxurious finish and modern design
+            aesthetics.
+          </p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer class="bg-gray-900 text-white text-center py-6">
-    <div class="footer-container flex flex-col items-center">
+    <footer class="bg-gray-900 text-white text-center py-6">
+      <div class="footer-container flex flex-col items-center">
         <div class="social-icons flex justify-center space-x-6 mb-4">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../public/fb.webp"
-                                                                                        alt="Facebook"
-                                                                                        class="w-6 transition-transform transform hover:scale-110"></a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="../public/ig.webp"
-                                                                                         alt="Instagram"
-                                                                                         class="w-6 transition-transform transform hover:scale-110"></a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="../public/twitter.webp"
-                                                                                       alt="Twitter"
-                                                                                       class="w-6 transition-transform transform hover:scale-110"></a>
-            <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img
-                    src="../public/wp.webp" alt="WhatsApp"
-                    class="w-6 transition-transform transform hover:scale-110"></a>
+          <a href="https://www.facebook.com" target="_blank" class="social-icon"
+            ><img
+              src="../public/fb.webp"
+              alt="Facebook"
+              class="w-6 transition-transform transform hover:scale-110"
+          /></a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="social-icon"
+            ><img
+              src="../public/ig.webp"
+              alt="Instagram"
+              class="w-6 transition-transform transform hover:scale-110"
+          /></a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon"
+            ><img
+              src="../public/twitter.webp"
+              alt="Twitter"
+              class="w-6 transition-transform transform hover:scale-110"
+          /></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=9871746894"
+            target="_blank"
+            class="social-icon"
+            ><img
+              src="../public/wp.webp"
+              alt="WhatsApp"
+              class="w-6 transition-transform transform hover:scale-110"
+          /></a>
         </div>
         <p class="text-sm">© 2024 Craftilo Tiles. All rights reserved.</p>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="../javascript/swiper.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#nav-btn').click(function() {
-            $('#navbar-links').toggleClass('hidden');
+    <script src="../javascript/swiper.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#nav-btn").click(function () {
+          $("#navbar-links").toggleClass("hidden");
         });
-    });
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>
