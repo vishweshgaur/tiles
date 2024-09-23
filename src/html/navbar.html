@@ -1,32 +1,95 @@
-<head>
-    <link rel="stylesheet" href="../css/navbar-style.css">
-    <!-- Include the Montserrat font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="navbar">
-
-        <!-- Updated the logo href to point to the homepage -->
-        <a href="index.html" class="logo"><img src="../public/logo.png" alt="Craftilo Tiles Logo"></a>
-        
-        <nav>
-            <ul class="nav-links">
-                <li><a href="catalogue.html">E-Catalogue</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="where-to-buy.html">Where-To-Buy</a></li>
-            </ul>
-               
-        </nav>
-        <div id="hamburger-toggle" class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+<header class="fixed top-0 w-full bg-white z-50">
+    <div class="flex justify-center items-center p-4">
+        <div class="block">
+            <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
         </div>
-        <button class="find-tile-btn">Find Your Tile</button> 
-        
-    
+        <button id="nav-btn" class="md:hidden focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" id="menu-icon">
+                <rect y="4" width="24" height="2" fill="black"></rect>
+                <rect y="11" width="24" height="2" fill="black"></rect>
+                <rect y="18" width="24" height="2" fill="black"></rect>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="hidden" id="close-icon">
+                <line x1="18" y1="6" x2="6" y2="18" stroke="black" stroke-width="2"/>
+                <line x1="6" y1="6" x2="18" y2="18" stroke="black" stroke-width="2"/>
+            </svg>
+        </button>
+        <nav id="navbar-links" class="hidden md:flex md:items-center md:space-x-6">
+            <ul class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold">
+                <li class="py-3">
+                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Home</a>
+                </li>
+                <li class="relative py-3 group">
+                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon">Tiles</a>
+                    <ul class="absolute left-0 w-48 mt-3 p-3 bg-white text-black shadow-lg rounded-lg dropdown-content">
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Nano</a>
+                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
+                                <li><a href="../html/double-charge-tile.html" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Double Charged</a>
+                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Glazed Vitrified</a>
+                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">48inch x 24inch</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">32inch x 32inch</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">64inch x 32inch</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">72inch x 48inch</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">80inch x 40inch</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">96inch x 48inch</a></li>
+                            </ul>
+                        </li>
+                        <!-- Add more categories as needed -->
+                    </ul>
+                </li>
+                <li class="py-3">
+                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">About</a>
+                </li>
+                <li class="py-3">
+                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <script src="../javascript/navbar.js"></script> 
-</body>
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform -translate-x-full transition-transform duration-300">
+        <div class="p-4">
+            <button id="mobile-close" class="text-black text-3xl">&times;</button>
+            <ul class="space-y-4 mt-6 text-xl">
+                <li>
+                    <a href="#" class="block hover:text-yellow-600">Home</a>
+                </li>
+                <li>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="block hover:text-yellow-600">Tiles</a>
+                        <span id="tiles-arrow" class="cursor-pointer">&rarr;</span>
+                    </div>
+                    <ul id="tiles-submenu" class="hidden space-y-2 mt-2 pl-4">
+                        <li>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="block hover:text-yellow-600">Nano</a>
+                                <span class="cursor-pointer">&rarr;</span>
+                            </div>
+                            <ul class="hidden space-y-2 mt-2 pl-4">
+                                <li><a href="#" class="block hover:text-yellow-600">24inch x 24inch</a></li>
+                            </ul>
+                        </li>
+                        <!-- More Tile Subcategories -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="block hover:text-yellow-600">About</a>
+                </li>
+                <li>
+                    <a href="#" class="block hover:text-yellow-600">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
