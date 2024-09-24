@@ -3,26 +3,15 @@
 // Function to load and inject the navbar HTML
 function loadNavbar() {
   const nav = document.getElementsByClassName("navbar-container");
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    fetch("navbar.html")
-      .then((response) => response.text())
 
-      .then((data) => {
-        console.log(nav);
-        nav[0].innerHTML = data;
-        // attachMenuListeners(); // Attach the menu functionality after loading
-      });
-  } else {
-    console.log("hello");
-    fetch("mobileNavbar.html")
-      .then((response) => response.text())
+  fetch("navbar.html")
+    .then((response) => response.text())
 
-      .then((data) => {
-        console.log(nav);
-        nav[0].innerHTML = data;
-        // attachMenuListeners(); // Attach the menu functionality after loading
-      });
-  }
+    .then((data) => {
+      console.log(nav);
+      nav[0].innerHTML = data;
+      // attachMenuListeners(); // Attach the menu functionality after loading
+    });
 }
 
 // Function to handle menu toggle functionality
