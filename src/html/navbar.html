@@ -1,12 +1,15 @@
-<header class="fixed top-0 w-full bg-white z-50">
-  <div class="flex flex-row flex-wrap justify-between items-center p-4">
+<header class="fixed top-0 w-full bg-white z-50" id="navbarContent ">
+  <div
+    class="flex flex-row flex-wrap justify-between items-center md:justify-between md:items-center md:flex-row p-4"
+    id="nav-cont"
+  >
     <div class="block items-center justify-center">
       <a href="index.html"
         ><img src="../public/logo.png" alt="Logo" class="w-52 h-auto"
       /></a>
     </div>
 
-    <button id="nav-btn" class="md:hidden">
+    <button id="nav-btn" class="visible md:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -126,4 +129,9 @@
       </ul>
     </nav>
   </div>
+  <img
+    src="../assets/cross.png"
+    class="h-5 w-5 hidden cursor-pointer md:hidden absolute top-0 right-0"
+    id="cut"
+  />
 </header>
