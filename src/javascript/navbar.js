@@ -2,11 +2,14 @@
 
 // Function to load and inject the navbar HTML
 function loadNavbar() {
+  const nav = document.getElementsByClassName("navbar-container");
   fetch("navbar.html")
     .then((response) => response.text())
+
     .then((data) => {
-      document.getElementById("navbar-container").innerHTML = data;
-      attachMenuListeners(); // Attach the menu functionality after loading
+      console.log(nav);
+      nav[0].innerHTML = data;
+      // attachMenuListeners(); // Attach the menu functionality after loading
     });
 }
 

@@ -1,8 +1,11 @@
 <header class="fixed top-0 w-full bg-white z-50">
   <div class="flex flex-row flex-wrap justify-between items-center p-4">
     <div class="block items-center justify-center">
-      <img src="../public/logo.png" alt="Logo" class="w-10 h-10" />
+      <a href="index.html"
+        ><img src="../public/logo.png" alt="Logo" class="w-52 h-auto"
+      /></a>
     </div>
+
     <button id="nav-btn" class="md:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -15,30 +18,27 @@
         <rect y="18" width="24" height="2" fill="black"></rect>
       </svg>
     </button>
-    <nav id="navbar-links" class="hidden md:flex md:items-center md:space-x-6">
+
+    <nav
+      id="navbar-links"
+      class="hidden md:flex md:items-center md:space-x-6 ubuntu-regular"
+    >
       <ul
-        class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold"
+        class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold text-2xl"
       >
-        <li class="py-3">
-          <a
-            href="#"
-            class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
-            >Home</a
-          >
-        </li>
-        <li class="relative py-3 group">
+        <li class="relative p-3 group">
           <a
             href="#"
             class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon"
             >Tiles</a
           >
           <ul
-            class="absolute left-0 w-48 mt-3 p-3 bg-white text-black shadow-lg rounded-lg dropdown-content"
+            class="absolute right-0 w-48 m-1 p-1 bg-white text-black shadow-lg rounded-lg dropdown-content text-base"
           >
             <li class="relative group submenu">
               <a href="#" class="block px-4 py-2 hover:bg-gray-100">Nano</a>
               <ul
-                class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                class="absolute left-full top-2 w-48 p-1 bg-white text-black shadow-lg rounded-lg sub-dropdown-content text-sm"
               >
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
@@ -52,7 +52,7 @@
                 >Double Charged</a
               >
               <ul
-                class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                class="absolute left-full top-2 w-48 p-1 bg-white text-black shadow-lg rounded-lg sub-dropdown-content text-sm"
               >
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
@@ -66,7 +66,7 @@
                 >Glazed Vitrified</a
               >
               <ul
-                class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                class="absolute left-full top-0 w-48 mt-0 p-1 bg-white text-black shadow-lg rounded-lg sub-dropdown-content text-sm"
               >
                 <li>
                   <a href="#" class="block px-4 py-2 hover:bg-gray-100"
@@ -108,26 +108,22 @@
             <!-- Add more categories as needed -->
           </ul>
         </li>
-        <li class="py-3">
+
+        <li class="p-3">
           <a
-            href="#"
+            href="about.html"
             class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
             >About</a
           >
         </li>
-        <li class="py-3">
+        <li class="p-3">
           <a
-            href="#"
+            href="contact.html"
             class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
             >Contact</a
           >
         </li>
       </ul>
     </nav>
-    <button
-      class="hidden md:block bg-[#F59E0B] text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-    >
-      Find Your Tile
-    </button>
   </div>
 </header>

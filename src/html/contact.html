@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <title>Contact Us - Craftilo Tiles</title>
+    <style>
+        .ubuntu-regular {
+          font-family: "Ubuntu", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+      </style>
     <style>
         /* Additional styling for the vertical form */
         .vertical-form {
@@ -53,17 +66,17 @@
         .vertical-form button:hover {
             background-color: #004494;
         }
+
+    
     </style>
 </head>
 <body>
     <!-- Same Navbar Section -->
-    <header>
-        <div id="navbar-container"></div>
-    </header>
+   <div class="navbar-container"></div>
     <script src="../javascript/navbar.js"></script>
 
     <!-- Contact Us Content Section -->
-    <section class="contact-us">
+    <section class="contact-us mt-24">
         <div class="container">
             <h1>Contact Us</h1>
             <p>We’d love to hear from you! Whether you have questions about our products, need help finding a retailer, or want to share your feedback, feel free to reach out to us.</p>
@@ -93,16 +106,16 @@
             </div>
         </div>
     </section>
-    footer>
+    <!-- <footer>
     <div class="footer-container">
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../../2504903.webp" alt="Facebook"></a>
             <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
             <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
             <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
         </div>
     </div>
-</footer>
+</footer> -->
 
 <footer>
     <footer>
@@ -110,12 +123,12 @@
     </footer>
 
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+        // const hamburger = document.querySelector(".hamburger");
+        // const navLinks = document.querySelector(".nav-links");
 
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("open");
-        });
+        // hamburger.addEventListener("click", () => {
+        //     navLinks.classList.toggle("open");
+        // });
     </script>
 </body>
 </html>
