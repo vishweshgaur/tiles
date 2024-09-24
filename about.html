@@ -4,8 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
     <title>About Us - Craftilo Tiles</title>
+    <style>
+        body {
+            font-family: 'Mulish', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-us {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .about-us p {
+            max-width: 900px;
+        }
+
+        /* Ensure even spacing between sections */
+        .about-us h2 {
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        .social-icon:hover img {
+            filter: brightness(0.8);
+        }
+
+        .find-tile-btn {
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .find-tile-btn:hover {
+            background-color: #e558a7;
+        }
+    </style>
 </head>
 <body>
     <!-- Same Navbar Section -->
@@ -44,7 +137,8 @@
         </div>
     </section>
 
-    footer>
+    <!-- Footer (Unchanged) -->
+    <footer>
         <div class="footer-container">
             <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
@@ -53,13 +147,10 @@
                 <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
             </div>
         </div>
-    </footer>
-    
-
-    <footer>
         <p>© 2024 Craftilo Tiles. All rights reserved.</p>
     </footer>
 
+    <!-- Script for Navbar -->
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");

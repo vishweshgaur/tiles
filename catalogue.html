@@ -4,8 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
     <title>E-Catalogue - Craftilo Tiles</title>
+    <style>
+        body {
+            font-family: 'Mulish', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .catalogue {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .catalogue-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .catalogue-section img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .catalogue-details {
+            max-width: 600px;
+        }
+
+        .download-btn {
+            background-color: #ff69b4;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            background-color: #e558a7;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        .social-icon:hover img {
+            filter: brightness(0.8);
+        }
+
+        .find-tile-btn {
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .find-tile-btn:hover {
+            background-color: #e558a7;
+        }
+    </style>
 </head>
 <body>
     <!-- Same Navbar Section -->
@@ -47,21 +163,20 @@
         </div>
     </section>
 
-    footer>
-    <div class="footer-container">
-        <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
-            <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
-        </div>
-    </div>
-</footer>
-
+    <!-- Footer (Unchanged) -->
     <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+            </div>
+        </div>
         <p>© 2024 Craftilo Tiles. All rights reserved.</p>
     </footer>
 
+    <!-- Script for Navbar -->
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");
