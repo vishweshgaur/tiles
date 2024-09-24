@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <title>About Us - Craftilo Tiles</title>
+</head>
+<body>
+    <!-- Same Navbar Section -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Craftilo Tiles Logo"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="catalogue.html">E-Catalogue</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <button class="find-tile-btn">Find Your Tile</button>
+        </div>
+    </header>
+
+    <!-- About Us Content Section -->
+    <section class="about-us">
+        <div class="container">
+            <h1>About Craftilo Tiles</h1>
+            <p>Craftilo Tiles has been at the forefront of the tiling industry for over a decade, offering innovative designs, premium materials, and cutting-edge manufacturing processes. Our passion for tiles has driven us to create unique products that redefine the way spaces are designed, from residential homes to commercial environments.</p>
+
+            <h2>Our Story</h2>
+            <p>Founded in 2014, Craftilo Tiles started with a simple goal: to provide high-quality, aesthetically pleasing, and durable tiles for every kind of space. With a commitment to craftsmanship, we have expanded our product range to cover a wide variety of styles, materials, and finishes, ensuring that we meet the diverse needs of our clients worldwide.</p>
+
+            <h2>Our Mission</h2>
+            <p>Our mission is to bring artistry and craftsmanship into every space through our tiles. We focus on sustainability, innovation, and superior quality to ensure that every tile we produce tells a story of elegance and functionality.</p>
+        </div>
+    </section>
+
+    footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <footer>
+        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

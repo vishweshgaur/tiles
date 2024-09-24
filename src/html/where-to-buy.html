@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <title>Where to Buy - Craftilo Tiles</title>
+</head>
+<body>
+    <!-- Same Navbar Section -->
+    <header>
+        <div id="navbar-container"></div>
+    </header>
+    <script src="../javascript/navbar.js"></script>
+
+    <!-- Where to Buy Content Section -->
+    <section class="where-to-buy">
+        <div class="container">
+            <h1>Find Craftilo Tiles Near You</h1>
+            <p>Craftilo Tiles are available through a wide network of authorized retailers and distributors. Find a store near you to explore our premium tile collections.</p>
+
+            <div class="store-locator">
+                <h2>Store Locator</h2>
+                <form class="store-form">
+                    <input type="text" placeholder="Enter your location">
+                    <button type="submit" class="find-store-btn">Find Store</button>
+                </form>
+
+                <div class="store-results">
+                    <!-- Sample Store Data -->
+                    <div class="store">
+                        <h3>Tile World, New York</h3>
+                        <p>Address: 123 Main St, New York, NY 10001</p>
+                        <p>Phone: (555) 555-1234</p>
+                    </div>
+                    <div class="store">
+                        <h3>Luxury Tiles, Los Angeles</h3>
+                        <p>Address: 456 Sunset Blvd, Los Angeles, CA 90028</p>
+                        <p>Phone: (555) 555-5678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <footer>
+        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
