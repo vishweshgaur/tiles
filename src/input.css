@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.rotate-90 {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+/* Ensuring it's animated */
+.arrow-transition {
+    transition: transform 0.3s ease;
+}
+.dropdown-content, .sub-dropdown-content {
+    display: none;
+}
+
+

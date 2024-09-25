@@ -15,6 +15,7 @@
         .dropdown-content, .sub-dropdown-content {
             display: none;
         }
+
         .group:hover > .dropdown-content,
         .submenu:hover > .sub-dropdown-content {
             display: block;
@@ -38,10 +39,12 @@
         <nav id="navbar-links" class="hidden md:flex md:items-center md:space-x-6">
             <ul class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold">
                 <li class="py-3">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Home</a>
+                    <a href="#"
+                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Home</a>
                 </li>
                 <li class="relative py-3 group">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon">Tiles</a>
+                    <a href="#"
+                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon">Tiles</a>
                     <ul class="absolute left-0 w-48 mt-3 p-3 bg-white text-black shadow-lg rounded-lg dropdown-content">
                         <li class="relative group submenu">
                             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Nano</a>
@@ -71,14 +74,18 @@
                     </ul>
                 </li>
                 <li class="py-3">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">About</a>
+                    <a href="#"
+                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">About</a>
                 </li>
                 <li class="py-3">
-                    <a href="#" class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Contact</a>
+                    <a href="contact.html"
+                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Contact</a>
                 </li>
             </ul>
         </nav>
-        <button class="hidden md:block bg-[#F59E0B] text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">Find Your Tile</button>
+        <button class="hidden md:block bg-[#F59E0B] text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            Find Your Tile
+        </button>
 
     </div>
 </header>
@@ -144,9 +151,12 @@
             &#10095;
         </button>
         <div class="dots flex justify-center" id="dots">
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i class="fas fa-circle"></i></span>
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i class="fas fa-circle"></i></span>
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i class="fas fa-circle"></i></span>
+            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i
+                    class="fas fa-circle"></i></span>
+            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i
+                    class="fas fa-circle"></i></span>
+            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i
+                    class="fas fa-circle"></i></span>
         </div>
     </div>
 </div>
@@ -219,8 +229,8 @@
 
 <script src="../javascript/swiper.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#nav-btn').click(function() {
+    $(document).ready(function () {
+        $('#nav-btn').click(function () {
             $('#navbar-links').toggleClass('hidden');
         });
     });
