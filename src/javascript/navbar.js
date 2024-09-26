@@ -51,7 +51,6 @@ function attachMenuListeners() {
     // });
 
 
-
     // Close mobile menu
     const mobileClose = document.getElementById('mobile-close');
     mobileClose.addEventListener('click', () => {
@@ -63,6 +62,25 @@ function attachMenuListeners() {
         tilesSubmenu.classList.add('hidden');
         tilesSubSubmenu.classList.add('hidden');
     });
+    //
+    //
+    //     window.addEventListener("scroll", () => {
+    //     console.log("hello");
+    //     if (window.scrollY > 0) {
+    //     let nav = document.getElementById("header");
+    //     console.log(nav);
+    //     nav.classList.replace("bg-transparent", "bg-white");
+    // }
+    // });
+    //
+    //     window.addEventListener("scroll", () => {
+    //     if (window.scrollY === 0) {
+    //     let nav = document.getElementById("header");
+    //     nav.classList.replace("bg-white", "bg-transparent");
+    // }
+    // });
+
+
 }
 
 // Call the loadNavbar function to inject the navbar
