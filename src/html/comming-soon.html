@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Coming Soon - Craftilo Tiles</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+<header class="fixed top-0 w-full bg-white z-50">
+    <div class="flex flex-row flex-wrap justify-between items-center px-4">
+        <div class="block items-center justify-center">
+            <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
+        </div>
+        <button id="nav-btn" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <rect y="4" width="24" height="2" fill="black"></rect>
+                <rect y="11" width="24" height="2" fill="black"></rect>
+                <rect y="18" width="24" height="2" fill="black"></rect>
+            </svg>
+        </button>
+        <nav id="navbar-links"
+             class="hidden md:flex md:flex-row w-full items-center justify-center md:w-auto md:space-x-6">
+            <ul class="flex flex-col p-5 font-bold items-center justify-center md:flex-row md:space-x-6">
+                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
+                    <li class="py-3">Home</li>
+                </a>
+                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
+                    <li class="py-3">Tiles</li>
+                </a>
+                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
+                    <li class="py-3">About</li>
+                </a>
+                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
+                    <li class="py-3">Contact</li>
+                </a>
+            </ul>
+        </nav>
+        <button class="hidden md:block bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            Find Your Tile
+        </button>
+
+    </div>
+</header>
+
+<script src="../javascript/navbar.js"></script>
+
+<!-- Coming Soon Section -->
+<div class="flex flex-col w-full gap-y-2 justify-center items-center">
+    <div>
+        <h1 class="text-4xl mt-28 p-4 font-semibold text-gray-800 tracking-wide">
+            COMING SOON <span class="text-xl">(New Tiles Collection)</span>
+        </h1>
+    </div>
+
+    <div class="text-lg p-4 text-gray-600 max-w-screen-md text-center">
+        We are currently expanding our catalogue. The latest tile designs will be available soon. Stay tuned for updates!
+    </div>
+
+    <div id="card-container" class="flex p-4 justify-center items-center flex-wrap gap-12">
+        <!-- "Coming Soon" Cards -->
+        <div class="bg-gray-200 p-6 rounded-lg shadow-lg w-72">
+            <img src="https://via.placeholder.com/250x250.png?text=Coming+Soon" alt="Tile Coming Soon" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2">1600 x 800 mm Glossy</h3>
+            <p class="text-gray-600 mb-4">This tile will be available soon.</p>
+            <button class="bg-gray-500 text-white py-2 px-4 rounded-lg cursor-not-allowed" disabled>Coming Soon</button>
+        </div>
+
+        <div class="bg-gray-200 p-6 rounded-lg shadow-lg w-72">
+            <img src="https://via.placeholder.com/250x250.png?text=Coming+Soon" alt="Tile Coming Soon" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2">1200 x 600 mm Matte</h3>
+            <p class="text-gray-600 mb-4">This tile will be available soon.</p>
+            <button class="bg-gray-500 text-white py-2 px-4 rounded-lg cursor-not-allowed" disabled>Coming Soon</button>
+        </div>
+
+        <div class="bg-gray-200 p-6 rounded-lg shadow-lg w-72">
+            <img src="https://via.placeholder.com/250x250.png?text=Coming+Soon" alt="Tile Coming Soon" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold mb-2">800 x 800 mm Textured</h3>
+            <p class="text-gray-600 mb-4">This tile will be available soon.</p>
+            <button class="bg-gray-500 text-white py-2 px-4 rounded-lg cursor-not-allowed" disabled>Coming Soon</button>
+        </div>
+    </div>
+</div>
+
+<script src="../javascript/catalogue.js"></script>
+</body>
+</html>
