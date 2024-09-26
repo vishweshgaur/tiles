@@ -3,13 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Include Mulish Font and the other fonts -->
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
     <title>About Us - Craftilo Tiles</title>
+
+    <style>
+        /* Font settings for Mulish */
+        body {
+            font-family: 'Mulish', 'Montserrat', 'Playfair Display', sans-serif;
+            background-color: #e0f7fa; /* Light bluish background */
+            color: #333; /* Default text color */
+        }
+
+        
+
+
+        /* About Us section styling */
+        .about-us {
+            padding: 3rem 1rem;
+            text-align: center;
+            background-color: #ffffff; /* White background */
+            color: #004d99; /* Bluish text for headings */
+        }
+
+        .about-us h1, .about-us h2 {
+            color: #004d99; /* Blue headings */
+        }
+
+        .about-us p {
+            color: #333; /* Darker text for paragraphs */
+            line-height: 1.7;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        
+
+        /* Hamburger menu for mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 2px;
+            width: 25px;
+            background-color: #fff;
+            margin: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #004d99;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Same Navbar Section -->
-    <header>
+    <!-- <header>
         <div class="navbar">
             <a href="index.html" class="logo"><img src="logo.png" alt="Craftilo Tiles Logo"></a>
             <nav>
@@ -28,7 +95,7 @@
             </nav>
             <button class="find-tile-btn">Find Your Tile</button>
         </div>
-    </header>
+    </header> -->
 
     <!-- About Us Content Section -->
     <section class="about-us">
@@ -44,21 +111,27 @@
         </div>
     </section>
 
-    footer>
-        <div class="footer-container">
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
-                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <div class="footer-container flex flex-col items-center">
+            <div class="social-icons flex justify-center space-x-6 mb-4">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../public/fb.webp"
+                                                                                            alt="Facebook"
+                                                                                            class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="../public/ig.webp"
+                                                                                             alt="Instagram"
+                                                                                             class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="../public/twitter.webp"
+                                                                                           alt="Twitter"
+                                                                                           class="w-6 transition-transform transform hover:scale-110"></a>
+                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img
+                        src="../public/wp.webp" alt="WhatsApp"
+                        class="w-6 transition-transform transform hover:scale-110"></a>
             </div>
+            <p class="text-sm">© 2024 Craftilo Tiles. All rights reserved.</p>
         </div>
     </footer>
     
-
-    <footer>
-        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
-    </footer>
 
     <script>
         const hamburger = document.querySelector(".hamburger");
