@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="../output.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <title>About Us - Craftilo Tiles</title>
+
     <style>
+        /* Font settings for Mulish */
         body {
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Mulish', 'Montserrat', 'Playfair Display', sans-serif;
+            background-color: #ffffff; /* Light bluish background */
+            color: #333; /* Default text color */
         }
     </style>
     <style>
@@ -25,53 +24,68 @@
             display: block;
         }
 
+        .about-us {
+            color: #333; /* Darker text for paragraphs */
+            line-height: 1.7;
+            margin-top: 90px;
+            padding-left: 48px;
+            padding-right: 48px;
+            font-size: 1.1rem;
+        }
+        .about-us p{
+            padding-bottom: 18px;
+            font-size: 1.1rem;
+        }
+
+
+
+
+
 
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <!-- Same Navbar Section -->
-    <header>
-        <div id="navbar-container"></div>
-    </header>
-    <script src="../javascript/navbar.js"></script> 
+<body>
+<header>
+    <div id="navbar-container"></div>
+</header>
+<script src="../javascript/navbar.js"></script>
 
-    <!-- About Us Content Section -->
-    <section class="about-us">
-        <div class="container">
-            <h1>About Craftilo Tiles</h1>
-            <p>Craftilo Tiles has been at the forefront of the tiling industry for over a decade, offering innovative designs, premium materials, and cutting-edge manufacturing processes. Our passion for tiles has driven us to create unique products that redefine the way spaces are designed, from residential homes to commercial environments.</p>
+<!-- About Us Content Section -->
+<section class="about-us">
+    <div class="container">
 
-            <h2>Our Story</h2>
-            <p>Founded in 2014, Craftilo Tiles started with a simple goal: to provide high-quality, aesthetically pleasing, and durable tiles for every kind of space. With a commitment to craftsmanship, we have expanded our product range to cover a wide variety of styles, materials, and finishes, ensuring that we meet the diverse needs of our clients worldwide.</p>
+        <p><b>About Craftilo Tiles</b><br>Craftilo Tiles began its journey in 2014 with a clear vision: to revolutionize the tiling industry by providing exceptional products that are both beautiful and durable. Starting as a small company with a passion for design and craftsmanship, Craftilo rapidly gained recognition for its meticulous attention to detail and superior tile-making processes. Over the years, the brand has grown, diversifying its product portfolio to cater to both modern and traditional tastes. Whether it's sleek, minimalist tiles for contemporary homes or intricate, hand-crafted designs for more classic spaces, Craftilo has continued to innovate, staying ahead of design trends while maintaining timeless craftsmanship. Today, the company is recognized globally, with clients spanning residential homes, luxury apartments, and commercial buildings.</p>
 
-            <h2>Our Mission</h2>
-            <p>Our mission is to bring artistry and craftsmanship into every space through our tiles. We focus on sustainability, innovation, and superior quality to ensure that every tile we produce tells a story of elegance and functionality.</p>
+<!--        <h2>Our Story</h2>-->
+        <p><b>Our Story </b><br>Craftilo Tiles’ mission is to blend artistry with functionality in every tile they create. Every piece is designed with careful thought, focusing on elevating spaces into expressions of personal style and comfort. Sustainability is at the heart of Craftilo's manufacturing process. The company is committed to using eco-friendly materials and sustainable manufacturing techniques that reduce waste and minimize environmental impact. By investing in innovation, Craftilo consistently pushes the boundaries of what’s possible in tile design, introducing unique textures, finishes, and patterns that can stand the test of time. With a focus on both aesthetics and durability, each tile from Craftilo serves as a functional work of art, capable of transforming any space.</p>
+
+<!--        <h2>Our Mission</h2>-->
+        <p><b>Our Mission</b><br>Craftilo Tiles' commitment to sustainability, innovation, and quality forms the core of its business ethos. Sustainability efforts focus on responsibly sourcing raw materials and employing eco-friendly production techniques, ensuring the company contributes positively to the environment. Craftilo also places a strong emphasis on innovation, continually experimenting with new tile materials, finishes, and design methods to keep up with changing interior design trends. Whether creating tiles that mimic the look of natural stone or developing ultra-modern finishes that offer a sleek, reflective surface, Craftilo ensures that quality never takes a backseat. Every tile undergoes rigorous quality testing to ensure durability, ensuring that customers get the best possible product for their spaces.</p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class= "bg-gray-900 text-white text-center py-6">
+    <div class="footer-container flex flex-col items-center">
+        <div class="social-icons flex justify-center space-x-6 mb-4">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../public/fb.webp"
+                                                                                        alt="Facebook"
+                                                                                        class="w-6 transition-transform transform hover:scale-110"></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="../public/ig.webp"
+                                                                                         alt="Instagram"
+                                                                                         class="w-6 transition-transform transform hover:scale-110"></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="../public/twitter.webp"
+                                                                                       alt="Twitter"
+                                                                                       class="w-6 transition-transform transform hover:scale-110"></a>
+            <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img
+                    src="../public/wp.webp" alt="WhatsApp"
+                    class="w-6 transition-transform transform hover:scale-110"></a>
         </div>
-    </section>
+        <p class="text-sm">© 2024 Craftilo Tiles. All rights reserved.</p>
+    </div>
+</footer>
 
-    footer>
-        <div class="footer-container">
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="2504903.webp" alt="Facebook"></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="2111463.webp" alt="Instagram"></a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="1690643640twitter-x-icon-png.webp" alt="Twitter"></a>
-                <a href="https://api.whatsapp.com/send?phone=9871746894" target="_blank" class="social-icon"><img src="360_F_695823366_wBngEryefLtKk8zJhuiWxUeG3BzMD9bn.webp" alt="WhatsApp"></a>
-            </div>
-        </div>
-    </footer>
-    
 
-    <footer>
-        <p>© 2024 Craftilo Tiles. All rights reserved.</p>
-    </footer>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("open");
-        });
-    </script>
 </body>
 </html>
