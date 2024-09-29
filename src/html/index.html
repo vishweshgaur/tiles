@@ -27,6 +27,14 @@
             height: 100%;
         }
 
+        .prev {
+            top: 50%;
+        }
+
+        .next {
+            top: 50%;
+        }
+
         @media screen and (max-width: 480px) {
             .prev {
                 padding: 0.35rem;
@@ -66,13 +74,14 @@
             }
             .prev {
                 padding: 0.55rem;
+                top: 50%;
             }
 
             .next {
                 padding: 0.55rem;
+                top: 50%;
             }
         }
-
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -346,42 +355,35 @@
         id="slide-container"
         class="relative w-full overflow-hidden bg-gray-900 rounded-lg"
 >
-    <div class="hidden slide h-full overflow-hidden">
-        <img src="../images/tile1.jpg" class="w-full h-full "/>
-    </div>
-    <div class="hidden slide h-full overflow-hidden">
-        <img src="../images/tile2.jpg" class="w-full h-full "/>
-    </div>
-    <div class="hidden slide h-full overflow-hidden">
-        <img src="../images/tile3.jpg" class="w-full h-full "/>
-    </div>
-    <div class="hidden slide h-full overflow-hidden">
-        <img src="../images/tile4.jpg" class="w-full h-full "/>
-    </div>
-
-    <!-- Previous and Next buttons -->
-    <div class="flex flex-row  justify-items-center">
-
+    <div class="relative h-full">
+        <div class="hidden slide h-full overflow-hidden">
+            <img src="../images/tile1.jpg" class="w-full h-full" />
+        </div>
+        <div class="hidden slide h-full overflow-hidden">
+            <img src="../images/tile2.jpg" class="w-full h-full" />
+        </div>
+        <div class="hidden slide h-full overflow-hidden">
+            <img src="../images/tile3.jpg" class="w-full h-full" />
+        </div>
+        <div class="hidden slide h-full overflow-hidden">
+            <img src="../images/tile4.jpg" class="w-full h-full" />
+        </div>
 
         <span
-                class="next cursor-pointer z-10 absolute top-1/2 right-0 transform translate-y-3/4 bg-gray-600 text-white p-3 text-xs font-bold rounded-full shadow-lg hover:bg-gray-200"
+                class="next cursor-pointer z-10 absolute right-0 transform bg-gray-600 text-white p-3 text-xs font-bold rounded-full shadow-lg hover:bg-gray-200"
                 onclick="controller(1)"
         >
           &#10095;
         </span>
-    </div>
-    <div class="flex flex-row  justify-items-center ">
+
         <span
-                class="prev cursor-pointer z-10 absolute  top-1/2  transform -translate-y-3/4 bg-gray-600 text-white p-3 font-bold rounded-full shadow-lg hover:bg-gray-200 "
+                class="prev cursor-pointer z-10 absolute transform bg-gray-600 text-white p-3 text-xs font-bold rounded-full shadow-lg hover:bg-gray-200"
                 onclick="controller(-1)"
         >
           &#10094;
         </span>
     </div>
-
-
 </div>
-
 
 <div id="tiles-section" class="w-full h-screen flex flex-wrap p-2">
     <!-- Cards will be injected via JavaScript -->

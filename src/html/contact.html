@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Contact Us - Craftilo Tiles</title>
     <style>
-
         .dropdown-content, .sub-dropdown-content {
             display: none;
         }
@@ -20,14 +19,12 @@
 
         body {
             font-family: 'Mulish', sans-serif;
-
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
         }
 
         .contact-us {
-            /*padding: 60px 20px;*/
             margin-top: 90px;
             background-color: #fff;
         }
@@ -78,15 +75,17 @@
             color: #555;
         }
 
-        .contact-form {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        /* Form Styles */
+        .vertical-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin-bottom: 40px;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        .vertical-form input,
+        .vertical-form textarea {
             width: 100%;
             padding: 15px;
             margin: 10px 0;
@@ -95,7 +94,7 @@
             font-size: 16px;
         }
 
-        .contact-form button {
+        .vertical-form button {
             background-color: #049fb6;
             color: #fff;
             padding: 12px 25px;
@@ -103,10 +102,9 @@
             border-radius: 5px;
             font-weight: bold;
             cursor: pointer;
-            display: inline-block;
         }
 
-        .contact-form button:hover {
+        .vertical-form button:hover {
             background-color: #135e68;
         }
 
@@ -121,6 +119,7 @@
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         body {
             font-family: 'Montserrat', sans-serif;
         }
@@ -128,14 +127,11 @@
         .dropdown-content, .sub-dropdown-content {
             display: none;
         }
+
         .group:hover > .dropdown-content,
         .submenu:hover > .sub-dropdown-content {
             display: block;
         }
-
-
-
-
     </style>
 </head>
 
@@ -158,7 +154,7 @@
             </div>
             <div class="contact-item">
                 <h2>Email</h2>
-                <p>info@craftilotiles.com</p>
+                <p>vishug730@gmail.com</p>
             </div>
             <div class="contact-item">
                 <h2>Address</h2>
@@ -166,14 +162,16 @@
             </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="#">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+        <!-- Contact Form (Replaced with Formspark) -->
+        <div class="vertical-form flex justify-center">
+            <form class="vertical-form" action="https://submit-form.com/6Qhktu9pe">
+                <label for="first-name">First name</label>
+                <input id="first-name" name="first-name" type="text" required/>
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="last-name" type="text" required/>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="15" rows="5" required></textarea>
+                <button type="submit">Submit</button>
             </form>
         </div>
 

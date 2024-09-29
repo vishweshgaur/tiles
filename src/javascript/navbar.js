@@ -41,14 +41,6 @@ function attachMenuListeners() {
         subCatArrow.classList.toggle('rotate-90'); // Rotate the Nano arrow
     });
 
-    // // Submenu toggle
-    // tilesArrow.addEventListener('click', () => {
-    //     tilesSubmenu.classList.toggle('hidden');
-    // });
-    //
-    // subCatArrow.addEventListener('click', () => {
-    //     tilesSubSubmenu.classList.toggle('hidden');
-    // });
 
 
     // Close mobile menu
@@ -62,26 +54,21 @@ function attachMenuListeners() {
         tilesSubmenu.classList.add('hidden');
         tilesSubSubmenu.classList.add('hidden');
     });
-    //
-    //
-    //     window.addEventListener("scroll", () => {
-    //     console.log("hello");
-    //     if (window.scrollY > 0) {
-    //     let nav = document.getElementById("header");
-    //     console.log(nav);
-    //     nav.classList.replace("bg-transparent", "bg-white");
-    // }
-    // });
-    //
-    //     window.addEventListener("scroll", () => {
-    //     if (window.scrollY === 0) {
-    //     let nav = document.getElementById("header");
-    //     nav.classList.replace("bg-white", "bg-transparent");
-    // }
-    // });
+
 
 
 }
+const style = document.createElement('style');
+style.textContent = `
+  .dropdown-content, .sub-dropdown-content {
+            display: none;
+        }
+        .group:hover > .dropdown-content,
+        .submenu:hover > .sub-dropdown-content {
+            display: block;
+        }
+`;
+document.head.appendChild(style);
 
 // Call the loadNavbar function to inject the navbar
 document.addEventListener('DOMContentLoaded', loadNavbar);

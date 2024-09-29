@@ -11,45 +11,18 @@
         body {
             font-family: 'Montserrat', sans-serif;
         }
+        .dropdown-content, .sub-dropdown-content {
+            display: none;
+        }
+        .group:hover > .dropdown-content,
+        .submenu:hover > .sub-dropdown-content {
+            display: block;
+        }
     </style>
 
 </head>
 <body class="bg-gray-100 text-gray-800">
-<header class="fixed top-0 w-full bg-white z-50">
-    <div class="flex flex-row flex-wrap justify-between items-center px-4">
-        <div class="block items-center justify-center">
-            <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
-        </div>
-        <button id="nav-btn" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <rect y="4" width="24" height="2" fill="black"></rect>
-                <rect y="11" width="24" height="2" fill="black"></rect>
-                <rect y="18" width="24" height="2" fill="black"></rect>
-            </svg>
-        </button>
-        <nav id="navbar-links"
-             class="hidden md:flex md:flex-row w-full items-center justify-center md:w-auto md:space-x-6">
-            <ul class="flex flex-col p-5 font-bold items-center justify-center md:flex-row md:space-x-6">
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">Home</li>
-                </a>
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">Tiles</li>
-                </a>
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">About</li>
-                </a>
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">Contact</li>
-                </a>
-            </ul>
-        </nav>
-        <button class="hidden md:block bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            Find Your Tile
-        </button>
-
-    </div>
-</header>
+<div id="navbar-container"></div>
 
 <script src="../javascript/navbar.js"></script>
 
