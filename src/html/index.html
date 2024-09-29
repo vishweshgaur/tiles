@@ -10,6 +10,7 @@
         body {
             font-family: "Montserrat", sans-serif;
             margin-top: -12px;
+            height: 100vh;
         }
         .dropdown-content,
         .sub-dropdown-content {
@@ -23,6 +24,7 @@
         #slide-container {
             opacity: 0.8;
             margin: 0;
+            height: 100%;
         }
 
         @media screen and (max-width: 480px) {
@@ -45,7 +47,7 @@
 
         @media screen and (min-width: 480px) and (max-width: 786px) {
             #slide-container {
-                height: 26rem;
+                height: 100%;
             }
 
             .prev {
@@ -59,7 +61,7 @@
 
         @media screen and (min-width: 786px) {
             #slide-container {
-                height: 33rem;
+                height: 100%;
                 margin-top: 0.55rem;
             }
             .prev {
@@ -370,7 +372,7 @@
     </div>
     <div class="flex flex-row  justify-items-center ">
         <span
-                class="prev cursor-pointer z-10 absolute  top-1/2 transform -translate-y-3/4 bg-gray-600 text-white p-3 font-bold rounded-full shadow-lg hover:bg-gray-200 "
+                class="prev cursor-pointer z-10 absolute  top-1/2  transform -translate-y-3/4 bg-gray-600 text-white p-3 font-bold rounded-full shadow-lg hover:bg-gray-200 "
                 onclick="controller(-1)"
         >
           &#10094;
@@ -380,42 +382,33 @@
 
 </div>
 
-<!-- Tile Categories Section with Explore Links -->
-<section class="flex flex-col md:flex-row p-12 bg-gray-200">
-    <div class="flex-1 mb-8 md:mb-0 md:mr-8">
-        <h2 class="text-2xl font-bold mb-6">Explore Our Floor Tiles</h2>
-        <div class="tile-grid grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-living-room text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Living Room Floor Tiles</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-bedroom text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Bedroom Floor Tiles</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-commercial text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Commercial Spaces</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-            <div class="tile-box bg-white border border-gray-300 p-6 text-center shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
-                <i class="icon-outdoor text-4xl mb-4 text-gray-900"></i>
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Outdoor Floor Tiles</h3>
-                <a href="#"
-                   class="explore-link text-gray-900 font-bold border-b-2 border-yellow-500 hover:text-yellow-500">Explore
-                    Now</a>
-            </div>
-        </div>
-    </div>
-</section>
+
+<div id="tiles-section" class="w-full h-screen flex flex-wrap p-2">
+    <!-- Cards will be injected via JavaScript -->
+</div>
+
+<!--<div class="flex justify-center m-6 ">-->
+<!--    <div id="onyx-section" class="flex justify-center items-center gap-6 p-6 w-1/2 rounded-2xl bg-white shadow-md hover:scale-105 transition-transform duration-500">-->
+<!--        <div class="w-1/2">-->
+<!--            <img src="../images/tile1.jpg" alt="desc" class="rounded-2xl"/>-->
+<!--        </div>-->
+<!--        <div class="flex flex-col justify-center gap-6 p-6 w-1/2">-->
+<!--            <h1 class="text-4xl">ONYX</h1>-->
+<!--            <p class="">-->
+<!--                Onyx, a mesmerizing natural stone, exhibits translucent layers that create a stunning play of light. Its exquisite beauty makes it a sought-after choice for elegant interiors and luxurious decor-->
+<!--            </p>-->
+
+<!--            <a href="https://tourism.gov.in/sites/default/files/2019-04/dummy-pdf_2.pdf"target="_blank" class="text-black hover:underline">-->
+<!--            <button class="border-4 border-gray-600 rounded-2xl p-2 hover:scale-105 hover:bg-gray- transition-transform duration-500">-->
+<!--            View Catalogue-->
+<!--            </button></a>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div id="onyx-section" class="flex justify-center items-center"></div>
 
 <div class="carousel-card bg-gray-200 shadow-lg rounded-lg overflow-hidden  p-4 w-full flex items-center justify-center">
     <div class="relative w-[50%]">
@@ -491,6 +484,7 @@
         </div>
     </div>
 </section>
+
 <a href="https://wa.me/9717400296" class="whatsapp-link" target="_blank" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
@@ -563,7 +557,9 @@
         tilesSubSubmenu.classList.add('hidden');
     });
 </script>
+<script src = "../javascript/homepage-cards.js"></script>
 <script src="../javascript/navbar.js"></script>
 <script src="../javascript/slider.js"></script>
+<script src="../javascript/tile-Card.js"></script>
 </body>
 </html>
