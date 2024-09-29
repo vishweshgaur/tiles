@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <title>Tile Catalogue</title>
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
     </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header>
+      <div id="navbar-container"></div>
+    </header>
+    <script src="../javascript/navbar.js"></script>
 
-</head>
-<body class="bg-gray-100 text-gray-800">
-<header class="fixed top-0 w-full bg-white z-50">
-    <div class="flex flex-row flex-wrap justify-between items-center px-4">
-        <div class="block items-center justify-center">
-            <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
-        </div>
-        <button id="nav-btn" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <rect y="4" width="24" height="2" fill="black"></rect>
-                <rect y="11" width="24" height="2" fill="black"></rect>
-                <rect y="18" width="24" height="2" fill="black"></rect>
-            </svg>
-        </button>
-        <nav id="navbar-links"
-             class="hidden md:flex md:flex-row w-full items-center justify-center md:w-auto md:space-x-6">
-            <ul class="flex flex-col p-5 font-bold items-center justify-center md:flex-row md:space-x-6">
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">Home</li>
-                </a>
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">Tiles</li>
-                </a>
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">About</li>
-                </a>
-                <a href="#" class="hover:text-yellow-600 hover: border-b-orange-700 hover:border-b-2 transition-all">
-                    <li class="py-3">Contact</li>
-                </a>
-            </ul>
-        </nav>
-        <button class="hidden md:block bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            Find Your Tile
-        </button>
-
-    </div>
-</header>
-
-<script src="../javascript/navbar.js"></script>
-
-<div class="flex flex-col w-full gap-y-2 justify-center items-center">
-    <div>
-        <h1 class="text-4xl mt-28 p-4 font-semibold text-gray-800 tracking-wide">
-            PARKING <span class="text-xl">(16inch by 16inch)</span>
+    <div class="flex flex-col w-full gap-y-2 justify-center items-center">
+      <div>
+        <h1
+          class="text-4xl mt-28 p-4 font-semibold text-gray-800 tracking-wide"
+        >
+          Parking <span class="text-xl">(16inch by 16inch)</span>
         </h1>
-    </div>
+      </div>
 
-    <div id="card-container" class="flex p-4 justify-center items-center flex-wrap gap-12">
+      <div
+        id="card-container"
+        class="flex p-4 justify-center items-center flex-wrap gap-12"
+      >
         <!-- Cards will be inserted here by JavaScript -->
-
+      </div>
     </div>
-
-</div>
-<script>
-    // Wait for the page to load before calling the function
-    document.addEventListener('DOMContentLoaded', function () {
+    <script>
+      // Wait for the page to load before calling the function
+      document.addEventListener("DOMContentLoaded", function () {
         // Call the function for each card with different arguments
 
-        createTileCard('1600 x 800 mm Glossy', "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg", 'https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg');
-        createTileCard('1600 x 800 mm Glossy', "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg", 'https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg');
-        createTileCard('1600 x 800 mm Glossy', "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg", 'https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg');
-        createTileCard('1600 x 800 mm Glossy', "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg", 'https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg');
-        createTileCard('1600 x 800 mm Glossy', "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg", 'https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg');
-    });
-</script>
-<script src="../javascript/catalogue.js"></script>
-</body>
+        createTileCard(
+          "1600 x 800 mm Glossy",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg"
+        );
+        createTileCard(
+          "1600 x 800 mm Glossy",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg"
+        );
+        createTileCard(
+          "1600 x 800 mm Glossy",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg"
+        );
+        createTileCard(
+          "1600 x 800 mm Glossy",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg"
+        );
+        createTileCard(
+          "1600 x 800 mm Glossy",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg",
+          "https://m.media-amazon.com/images/I/51JLcuytUdL._AC_UF1000,1000_QL80_.jpg"
+        );
+      });
+    </script>
+    <script src="../javascript/catalogue.js"></script>
+  </body>
 </html>
