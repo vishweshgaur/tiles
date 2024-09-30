@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Craftilo Tiles Store</title>
     <style>
         body {
-            font-family: "Montserrat", sans-serif;
+            font-family: 'Mulish', 'Montserrat', 'Playfair Display', sans-serif;
             margin-top: -12px;
             height: 100vh;
         }
@@ -87,244 +88,694 @@
 <body class="bg-gray-100 text-gray-800">
 
 <header id="header" class="fixed top-0 w-full bg-transparent z-50">
-    <div class="flex justify-center items-center p-4">
-        <div class="">
+    <div class="relative flex justify-center items-center md:p-4 p-8">
+        <div class="absolute left-4">
             <a href="index.html">
-                <img src="../public/logo.png" alt="Logo" class="w-52 h-auto">
+                <img src="../public/logo.png" alt="Logo" class="w-52 h-auto" />
             </a>
         </div>
-        <button id="nav-btn" class="md:hidden focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" id="menu-icon">
+        <button id="nav-btn" class="absolute right-4 md:hidden focus:outline-none">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    id="menu-icon"
+            >
                 <rect y="4" width="24" height="2" fill="black"></rect>
                 <rect y="11" width="24" height="2" fill="black"></rect>
                 <rect y="18" width="24" height="2" fill="black"></rect>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="hidden" id="close-icon">
-                <line x1="18" y1="6" x2="6" y2="18" stroke="black" stroke-width="2"/>
-                <line x1="6" y1="6" x2="18" y2="18" stroke="black" stroke-width="2"/>
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    class="hidden"
+                    id="close-icon"
+            >
+                <line x1="18" y1="6" x2="6" y2="18" stroke="black" stroke-width="2" />
+                <line x1="6" y1="6" x2="18" y2="18" stroke="black" stroke-width="2" />
             </svg>
         </button>
         <nav id="navbar-links" class="hidden md:flex md:items-center md:space-x-6">
-            <ul class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold">
+            <ul
+                    class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 font-bold"
+            >
                 <li class="py-3">
                     <a href="index.html"
                        class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Home</a>
                 </li>
-
                 <li class="relative py-3 group">
-                    <a href="#"
-                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon">Tiles</a>
-                    <ul class="absolute left-0 w-48 mt-3 p-3 bg-white text-black shadow-lg rounded-lg dropdown-content">
+                    <a
+                            href="#"
+                            class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all dropdown-icon"
+                    >Tiles</a
+                    >
+                    <ul
+                            class="absolute left-0 w-48 mt-3 p-3 bg-white text-black shadow-lg rounded-lg dropdown-content"
+                    >
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">NANO</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
+                            <a href="" class="block px-4 py-2 hover:bg-gray-100">Nano</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Double Charged</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Double Charged</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/double-charged-24.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Glazed Vitrified</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">48inch x 24inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">32inch x 32inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">64inch x 32inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">72inch x 48inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">80inch x 40inch</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">96inch x 48inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Glazed Vitrified</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/glazed-vitrified-24x24.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/glazed-vitrified48x48.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >48inch x 24inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/glazed-vitrified32x32.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >32inch x 32inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                                    >64inch x 32inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                                    >72inch x 48inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                                    >80inch x 40inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                                    >96inch x 48inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
                         <!-- Add more categories as needed -->
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">WOODEN STRIPS</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/wooden-strips.html" class="block px-4 py-2 hover:bg-gray-100">36inch
-                                    x 6inch</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">FULL BODY</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/full-body24.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x 24inch -10mm</a></li>
-                                <li><a href="../html/full-body48.html" class="block px-4 py-2 hover:bg-gray-100">48inch
-                                    x 24inch -16mm</a></li>
-                                <li><a href="../html/full-body96.html" class="block px-4 py-2 hover:bg-gray-100">96inch
-                                    x 32inch</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">CARVING</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">24inch x 24inch</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">IMPORTED</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">Crafted
-                                    Crossway</a></li>
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">Curved
-                                    Elegance</a></li>
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">Fluted
-                                    Subway Tiles</a></li>
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">Oceanic
-                                    Teal Waves </a></li>
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">48inch
-                                    x 12inch</a></li>
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x 12inch</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">BATHROOM</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/bathroom15x10.html" class="block px-4 py-2 hover:bg-gray-100">15inch
-                                    x
-                                    10inch</a></li>
-                                <li><a href="../html/bathroom18x12.html" class="block px-4 py-2 hover:bg-gray-100">15inch
-                                    x
-                                    12inch</a></li>
-                                <li><a href="../html/bathroom24x12.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x
-                                    12inch</a></li>
-                                <li><a href="../html/bathroom48x24.html" class="block px-4 py-2 hover:bg-gray-100">48inch
-                                    x
-                                    24inch</a></li>
-                                <li><a href="../html/bathroom64.html" class="block px-4 py-2 hover:bg-gray-100">64inch x
-                                    32inch</a></li>
-                                <li><a href="bathroom72x48.html" class="block px-4 py-2 hover:bg-gray-100">72inch x
-                                    48inch</a>
-                                </li>
-                                <li><a href="../html/bathroom96x48.html" class="block px-4 py-2 hover:bg-gray-100">96inch
-                                    x
-                                    48inch</a></li>
-                                <li><a href="../html/bathroom1x2.html" class="block px-4 py-2 hover:bg-gray-100">1mtr x
-                                    2mtr</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Wooden Strips</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/wooden-strips.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >36inch x 6inch</a
+                                    >
                                 </li>
                             </ul>
                         </li>
 
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">POOJA ROOM</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/pooja-room15x10.html" class="block px-4 py-2 hover:bg-gray-100">15inch
-                                    x
-                                    10inch</a></li>
-                                <li><a href="../html/pooja-room18x12.html" class="block px-4 py-2 hover:bg-gray-100">18inch
-                                    x
-                                    12inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Full Body</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/full-body24.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch -10mm</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/full-body48.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >48inch x 24inch -16mm</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/full-body96.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >96inch x 32inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
 
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">KITCHEN</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/kitchen15x10.html" class="block px-4 py-2 hover:bg-gray-100">15inch
-                                    x
-                                    10inch</a></li>
-                                <li><a href="../html/kitchen18x12.html" class="block px-4 py-2 hover:bg-gray-100">18inch
-                                    x
-                                    12inch</a></li>
-                                <li><a href="../html/kitchen24x12.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x
-                                    12inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Carving</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
 
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">MOROCCAN</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/comming-soon.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x
-                                    24inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Imported</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >Crafted Crossway</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >Curved Elegance</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >Fluted Subway Tiles</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >Oceanic Teal Waves
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >48inch x 12inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 12inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
 
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">PORECELAIN</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/porcelain24x24.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x
-                                    24inch</a></li>
-
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Bathroom</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/bathroom15x10.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >15inch x 10inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/bathroom18x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >15inch x 12inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/bathroom24x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 12inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/bathroom48x24.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >48inch x 24inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/bathroom64.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >64inch x 32inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="bathroom72x48.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >72inch x 48inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/bathroom96x48.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >96inch x 48inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/bathroom1x2.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >1mtr x 2mtr</a
+                                    >
+                                </li>
                             </ul>
                         </li>
 
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">ELEVATION</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/elevation18x12.html" class="block px-4 py-2 hover:bg-gray-100">18inch
-                                    x
-                                    12inch</a></li>
-                                <li><a href="../html/elevation24x12.html" class="block px-4 py-2 hover:bg-gray-100">24inch
-                                    x
-                                    12inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Pooja Room</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/pooja-room15x10.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >15inch x 10inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/pooja-room18x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >18inch x 12inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
 
                         <li class="relative group submenu">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">PARKING</a>
-                            <ul class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content">
-                                <li><a href="../html/parking12x12.html" class="block px-4 py-2 hover:bg-gray-100">12inch
-                                    x
-                                    12inch</a></li>
-                                <li><a href="../html/parking16x16.html" class="block px-4 py-2 hover:bg-gray-100">16inch
-                                    x
-                                    16inch</a></li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kitchen</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/kitchen15x10.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >15inch x 10inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/kitchen18x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >18inch x 12inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/kitchen24x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 12inch</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Moroccan</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/coming-soon.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Porcelain</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/porcelain24x24.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 24inch</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                            >Elevation</a
+                            >
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/elevation18x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >18inch x 12inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/elevation24x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >24inch x 12inch</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="relative group submenu">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Parking</a>
+                            <ul
+                                    class="absolute left-full top-0 w-48 mt-0 p-3 bg-white text-black shadow-lg rounded-lg sub-dropdown-content"
+                            >
+                                <li>
+                                    <a
+                                            href="../html/parking12x12.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >12inch x 12inch</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                            href="../html/parking16x16.html"
+                                            class="block px-4 py-2 hover:bg-gray-100"
+                                    >16inch x 16inch</a
+                                    >
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li class="py-3">
-                    <a href="about.html"
-                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">About</a>
+                    <a
+                            href="about.html"
+                            class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
+                    >About</a
+                    >
                 </li>
                 <li class="py-3">
-                    <a href="contact.html"
-                       class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all">Contact</a>
+                    <a
+                            href="contact.html"
+                            class="hover:text-yellow-600 border-b-2 border-transparent hover:border-orange-700 transition-all"
+                    >Contact</a
+                    >
                 </li>
             </ul>
         </nav>
     </div>
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform -translate-x-full transition-transform duration-300">
-        <div class="p-4">
+    <div id="mobile-menu"
+         class="fixed inset-0 bg-white z-40 transform -translate-x-full transition-transform duration-300">
+        <div class="p-4 ">
             <button id="mobile-close" class="text-black text-3xl">&times;</button>
-            <ul class="space-y-4 mt-6 text-xl">
+            <ul class="space-y-4 mt-6 text-xl ">
                 <li>
                     <a href="#" class="block hover:text-yellow-600">Home</a>
                 </li>
                 <li>
-                    <div id="tiles-div" class="flex justify-between items-center cursor-pointer">
+                    <div id="tiles-div" class="flex justify-between items-center cursor-pointer ">
                         <a href="#" class="block hover:text-yellow-600">Tiles</a>
-                        <span id="tiles-arrow" class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                        <span id="tiles-arrow"
+                              class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
                     </div>
-                    <ul id="tiles-submenu" class="hidden space-y-2 mt-2 pl-4">
+                    <ul id="tiles-submenu" class="hidden space-y-2 h-96 mt-2 pl-4 overflow-y-scroll">
+
                         <li>
-                            <div id="nano-div" class="flex justify-between items-center cursor-pointer">
+                            <div data-tile="nano" class="tile-item flex justify-between items-center cursor-pointer">
                                 <a href="#" class="block hover:text-yellow-600">Nano</a>
-                                <span id="subcat-arrow" class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                                <span id="nano-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
                             </div>
-                            <ul id="tiles-sub-submenu" class="hidden space-y-2 mt-2 pl-4">
-                                <li><a href="#" class="block hover:text-yellow-600">24inch x 24inch</a></li>
+                            <ul id="nano-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">24inch x
+                                    24inch</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <div data-tile="double-charged"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Double Charged</a>
+                                <span id="double-charged-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="double-charged-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/double-charged-24.html" class="block hover:text-yellow-600">24inch
+                                    x 24inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="glazed-vitrified"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Glazed Vitrified</a>
+                                <span id="glazed-vitrified-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="glazed-vitrified-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/glazed-vitrified-24x24.html" class="block hover:text-yellow-600">24inch
+                                    x 24inch</a></li>
+                                <li><a href="../html/glazed-vitrified48x48.html" class="block hover:text-yellow-600">48inch
+                                    x 24inch</a></li>
+                                <li><a href="../html/glazed-vitrified32x32.html" class="block hover:text-yellow-600">32inch
+                                    x 32inch</a></li>
+                                <li><a href="../html/glazed-vitrified64x32.html" class="block hover:text-yellow-600">64inch
+                                    x 32inch</a></li>
+                                <li><a href="../html/glazed-vitrified72x48.html" class="block hover:text-yellow-600">72inch
+                                    x 48inch</a></li>
+                                <li><a href="../html/glazed-vitrified80x40.html" class="block hover:text-yellow-600">80inch
+                                    x 40inch</a></li>
+                                <li><a href="../html/glazed-vitrified96x48.html" class="block hover:text-yellow-600">96inch
+                                    x 48inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="wooden-strips"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Wooden Strips</a>
+                                <span id="wooden-strips-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="wooden-strips-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/wooden-strips.html" class="block hover:text-yellow-600">36inch x
+                                    6inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="full-body"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Full Body</a>
+                                <span id="full-body-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="full-body-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/full-body24.html" class="block hover:text-yellow-600">24inch x
+                                    24inch - 10mm</a></li>
+                                <li><a href="../html/full-body48.html" class="block hover:text-yellow-600">48inch x
+                                    24inch - 16mm</a></li>
+                                <li><a href="../html/full-body96.html" class="block hover:text-yellow-600">96inch x
+                                    32inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="carving" class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Carving</a>
+                                <span id="carving-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="carving-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">24inch x
+                                    24inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="imported"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Imported</a>
+                                <span id="imported-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="imported-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">Crafted
+                                    Crossway</a></li>
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">Curved
+                                    Elegance</a></li>
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">Fluted Subway
+                                    Tiles</a></li>
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">Oceanic Teal
+                                    Waves</a></li>
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">48inch x
+                                    12inch</a></li>
+                                <li><a href="../html/coming-soon.html" class="block hover:text-yellow-600">24inch x
+                                    12inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="bathroom"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Bathroom</a>
+                                <span id="bathroom-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="bathroom-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/bathroom15x10.html" class="block hover:text-yellow-600">15inch x
+                                    10inch</a></li>
+                                <li><a href="../html/bathroom18x12.html" class="block hover:text-yellow-600">18inch x
+                                    12inch</a></li>
+                                <li><a href="../html/bathroom64.html" class="block hover:text-yellow-600">64inch x
+                                    32inch</a></li>
+                                <li><a href="bathroom72x48.html" class="block hover:text-yellow-600">72inch x 48inch</a>
+                                </li>
+                                <li><a href="../html/bathroom96x48.html" class="block hover:text-yellow-600">96inch x
+                                    48inch</a></li>
+                                <li><a href="../html/bathroom1x2.html" class="block hover:text-yellow-600">1mtr x
+                                    2mtr</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="pooja" class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Pooja Room</a>
+                                <span id="pooja-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="pooja-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="pooja-room15x10.html" class="block hover:text-yellow-600">15inch x
+                                    10inch</a></li>
+                                <li><a href="pooja-room18x12.html" class="block hover:text-yellow-600">18inch x
+                                    12inch</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div data-tile="kitchen" class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Kitchen</a>
+                                <span id="kitchen-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="kitchen-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/kitchen15x10.html" class="block hover:text-yellow-600">15inch x
+                                    10inch</a></li>
+                                <li><a href="../html/kitchen18x12.html" class="block hover:text-yellow-600">18inch x
+                                    12inch</a></li>
+                                <li><a href="../html/kitchen24x12.html" class="block hover:text-yellow-600">24inch x
+                                    12inch</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div data-tile="moroccan"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Moroccan</a>
+                                <span id="moroccan-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="moroccan-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/moroccan24x24.html" class="block hover:text-yellow-600">24inch x
+                                    24inch</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div data-tile="porcelain"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Porcelain</a>
+                                <span id="porcelain-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="porcelain-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/porcelain24x24.html" class="block hover:text-yellow-600">24inch x
+                                    24inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="elevation"
+                                 class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Elevation</a>
+                                <span id="elevation-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="elevation-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/elevation18x12.html" class="block hover:text-yellow-600">18inch x
+                                    12inch</a></li>
+                                <li><a href="../html/elevation24x12.html" class="block hover:text-yellow-600">24inch x
+                                    12inch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div data-tile="parking" class="tile-item flex justify-between items-center cursor-pointer">
+                                <a href="#" class="block hover:text-yellow-600">Parking</a>
+                                <span id="parking-subcat-arrow"
+                                      class="cursor-pointer transform transition-transform duration-300">&rarr;</span>
+                            </div>
+                            <ul id="parking-submenu" class="sub-menu hidden space-y-2 mt-2 pl-4">
+                                <li><a href="../html/parking12x12.html" class="block hover:text-yellow-600">12inch x
+                                    12inch</a></li>
+                                <li><a href="../html/parking16x16.html" class="block hover:text-yellow-600">16inch x
+                                    16inch</a></li>
+                            </ul>
+                        </li>
+
                         <!-- More Tile Subcategories -->
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="block hover:text-yellow-600">About</a>
+                    <a href="about.html" class="block hover:text-yellow-600">About</a>
                 </li>
                 <li>
                     <a href="../html/contact.html" class="block hover:text-yellow-600">Contact</a>
@@ -332,11 +783,9 @@
             </ul>
         </div>
     </div>
-
 </header>
 <script>
     window.addEventListener("scroll", () => {
-        console.log("hello");
         if (window.scrollY > 0) {
             let nav = document.getElementById("header");
             console.log(nav);
@@ -357,16 +806,16 @@
 >
     <div class="relative h-full">
         <div class="hidden slide h-full overflow-hidden">
-            <img src="../images/tile1.jpg" class="w-full h-full" />
+            <img src="../images/Image_1.jpg" class="w-full h-full" />
         </div>
         <div class="hidden slide h-full overflow-hidden">
-            <img src="../images/tile2.jpg" class="w-full h-full" />
+            <img src="../images/Image_2.jpg" class="w-full h-full" />
         </div>
         <div class="hidden slide h-full overflow-hidden">
-            <img src="../images/tile3.jpg" class="w-full h-full" />
+            <img src="../images/Image_3.jpg" class="w-full h-full" />
         </div>
         <div class="hidden slide h-full overflow-hidden">
-            <img src="../images/tile4.jpg" class="w-full h-full" />
+            <img src="../images/Image_4.jpg" class="w-full h-full" />
         </div>
 
         <span
@@ -385,109 +834,17 @@
     </div>
 </div>
 
-<div id="tiles-section" class="w-full h-screen flex flex-wrap p-2">
-    <!-- Cards will be injected via JavaScript -->
+<div id="tiles-section-one" class="w-full h-screen flex flex-wrap p-2">
 </div>
 
-<!--<div class="flex justify-center m-6 ">-->
-<!--    <div id="onyx-section" class="flex justify-center items-center gap-6 p-6 w-1/2 rounded-2xl bg-white shadow-md hover:scale-105 transition-transform duration-500">-->
-<!--        <div class="w-1/2">-->
-<!--            <img src="../images/tile1.jpg" alt="desc" class="rounded-2xl"/>-->
-<!--        </div>-->
-<!--        <div class="flex flex-col justify-center gap-6 p-6 w-1/2">-->
-<!--            <h1 class="text-4xl">ONYX</h1>-->
-<!--            <p class="">-->
-<!--                Onyx, a mesmerizing natural stone, exhibits translucent layers that create a stunning play of light. Its exquisite beauty makes it a sought-after choice for elegant interiors and luxurious decor-->
-<!--            </p>-->
+<div id="onyx-section-one" class="flex justify-center items-center"></div>
 
-<!--            <a href="https://tourism.gov.in/sites/default/files/2019-04/dummy-pdf_2.pdf"target="_blank" class="text-black hover:underline">-->
-<!--            <button class="border-4 border-gray-600 rounded-2xl p-2 hover:scale-105 hover:bg-gray- transition-transform duration-500">-->
-<!--            View Catalogue-->
-<!--            </button></a>-->
-
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-<div id="onyx-section" class="flex justify-center items-center"></div>
-
-<div class="carousel-card bg-gray-200 shadow-lg rounded-lg overflow-hidden  p-4 w-full flex items-center justify-center">
-    <div class="relative w-[50%]">
-
-        <div class="carousel rounded-2xl overflow-hidden relative w-full">
-            <div class="flex transition-transform ease-out duration-500 rounded-2xl" id="carousel">
-                <img src="../public/tileaqua.png" class="w-full object-cover"/>
-                <img src="../public/tileniqqa.png" class="w-full object-cover"/>
-                <img src="../public/tilewhite.png" class="w-full object-cover"/>
-            </div>
-        </div>
-        <button id="prevBtn"
-                class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 flex rounded-2xl hover:bg-opacity-70">
-            &#10094;
-        </button>
-        <button id="nextBtn"
-                class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 flex rounded-2xl hover:bg-opacity-70 ">
-            &#10095;
-        </button>
-        <div class="dots flex justify-center" id="dots">
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i
-                    class="fas fa-circle"></i></span>
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i
-                    class="fas fa-circle"></i></span>
-            <span class="dot text-gray-400 mx-1 cursor-pointer transition-colors duration-300"><i
-                    class="fas fa-circle"></i></span>
-        </div>
-    </div>
+<div id="tiles-section-two" class="w-full h-screen flex flex-wrap p-2">
 </div>
 
+<div id="onyx-section-two" class="flex justify-center items-center"></div>
 
-<section class="trending-products py-16 bg-gradient-to-r from-gray-100 to-gray-300 text-center text-gray-800">
-    <h2 class="section-title text-4xl font-bold font-playfair mb-12 relative inline-block">
-        Trending Products
-        <span class="block w-20 h-1 bg-yellow-500 mt-2 mx-auto"></span>
-    </h2>
-    <div class="products-grid flex flex-wrap justify-center gap-6">
-        <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
-            <div class="product-img-container relative overflow-hidden">
-                <img src="../public/tileaqua.png" alt="The Ultima - 4DX"
-                     class="w-full transition-transform transform hover:scale-110">
-                <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
-                    <p class="p-4">Progressive Thinking, Exceptional Design</p>
-                </div>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mt-4">The Ultima - 4DX</h3>
-            <p class="text-gray-600 text-base p-4">The 4DX Series by Kajaria Eternity makes a bold statement in modern
-                design.</p>
-        </div>
-        <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
-            <div class="product-img-container relative overflow-hidden">
-                <img src="../public/tilewhite.png" alt="Gres Tough"
-                     class="w-full transition-transform transform hover:scale-110">
-                <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
-                    <p class="p-4">Italian Marble Elegance Reimagined</p>
-                </div>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mt-4">Gres Tough</h3>
-            <p class="text-gray-600 text-base p-4">The Gres Tough Tiles Collection features elegant, natural Italian
-                Marble patterns.</p>
-        </div>
-        <div class="product bg-white rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden relative w-full max-w-xs">
-            <div class="product-img-container relative overflow-hidden">
-                <img src="../public/tileniqqa.png" alt="Vitronite"
-                     class="w-full transition-transform transform hover:scale-110">
-                <div class="product-overlay absolute inset-0 bg-gray-900 bg-opacity-75 text-white flex justify-center items-center opacity-0 transition-opacity hover:opacity-100">
-                    <p class="p-4">Modern Countertops for Elegant Kitchens</p>
-                </div>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mt-4">Vitronite</h3>
-            <p class="text-gray-600 text-base p-4">New Age modern countertops with a luxurious finish and modern design
-                aesthetics.</p>
-        </div>
-    </div>
-</section>
-
-<a href="https://wa.me/9717400296" class="whatsapp-link" target="_blank" title="Chat with us on WhatsApp">
+<a href="https://wa.me/9556719314" class="whatsapp-link" target="_blank" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -527,9 +884,9 @@
     const tilesDiv = document.querySelector("#tiles-arrow").parentElement;
     const tilesArrow = document.getElementById('tiles-arrow');
     const tilesSubmenu = document.getElementById('tiles-submenu');
-    const subCatDiv = document.querySelector("#subcat-arrow").parentElement;
+    // const subCatDiv = document.querySelector("#subcat-arrow").parentElement;
     const tilesSubSubmenu = document.getElementById('tiles-sub-submenu');
-    const subCatArrow = document.getElementById('subcat-arrow');
+    // const subCatArrow = document.getElementById('subcat-arrow');
     // Toggle mobile menu
     navBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('-translate-x-full');
@@ -537,16 +894,48 @@
         closeIcon.classList.toggle('hidden');
     });
 
-    tilesDiv.addEventListener('click', () => {
-        tilesSubmenu.classList.toggle('hidden'); // Show/hide the Tiles submenu
-        tilesArrow.classList.toggle('rotate-90'); // Rotate the arrow when toggled
+    document.getElementById('mobile-close').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('-translate-x-full');  // Close mobile menu
     });
 
-    // Toggle for Nano submenu (click anywhere on the div)
-    subCatDiv.addEventListener('click', () => {
-        tilesSubSubmenu.classList.toggle('hidden'); // Show/hide the Nano submenu
-        subCatArrow.classList.toggle('rotate-90'); // Rotate the Nano arrow
+    // Function to handle 'Tiles' submenu toggle
+    document.getElementById('tiles-div').addEventListener('click', function() {
+        const submenu = document.getElementById('tiles-submenu');
+        const arrow = document.getElementById('tiles-arrow');
+
+        // Toggle submenu visibility
+        submenu.classList.toggle('hidden');
+
+        // Rotate the arrow
+        arrow.classList.toggle('rotate-90');
     });
+
+    // Function to handle individual tile item (e.g., 'Nano') submenu toggle
+    document.querySelectorAll('.tile-item').forEach(item => {
+        item.addEventListener('click', function(event) {
+            const tileType = this.getAttribute('data-tile');
+            const submenu = document.getElementById(`${tileType}-submenu`);
+            const arrow = document.getElementById(`${tileType}-subcat-arrow`);
+
+            // Toggle submenu visibility
+            submenu.classList.toggle('hidden');
+
+            // Rotate the arrow
+            arrow.classList.toggle('rotate-90');
+
+            // Prevent click from closing parent menus
+            event.stopPropagation();
+        });
+    });
+
+    // // Toggle for Nano submenu (click anywhere on the div)
+    // subCatDiv.addEventListener('click', () => {
+    //     tilesSubSubmenu.classList.toggle('hidden'); // Show/hide the Nano submenu
+    //     subCatArrow.classList.toggle('rotate-90'); // Rotate the Nano arrow
+    // });
+
+
+
     // Close mobile menu
     const mobileClose = document.getElementById('mobile-close');
     mobileClose.addEventListener('click', () => {
@@ -559,9 +948,10 @@
         tilesSubSubmenu.classList.add('hidden');
     });
 </script>
-<script src = "../javascript/homepage-cards.js"></script>
+
+<script src = "../javascript/four-card.js"></script>
 <script src="../javascript/navbar.js"></script>
 <script src="../javascript/slider.js"></script>
-<script src="../javascript/tile-Card.js"></script>
+<script src="../javascript/single-card.js"></script>
 </body>
 </html>

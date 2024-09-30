@@ -20,9 +20,9 @@ function attachMenuListeners() {
     const tilesDiv = document.querySelector("#tiles-arrow").parentElement;
     const tilesArrow = document.getElementById('tiles-arrow');
     const tilesSubmenu = document.getElementById('tiles-submenu');
-    const subCatDiv = document.querySelector("#subcat-arrow").parentElement;
+    // const subCatDiv = document.querySelector("#subcat-arrow").parentElement;
     const tilesSubSubmenu = document.getElementById('tiles-sub-submenu');
-    const subCatArrow = document.getElementById('subcat-arrow');
+    // const subCatArrow = document.getElementById('subcat-arrow');
     // Toggle mobile menu
     navBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('-translate-x-full');
@@ -30,16 +30,45 @@ function attachMenuListeners() {
         closeIcon.classList.toggle('hidden');
     });
 
-    tilesDiv.addEventListener('click', () => {
-        tilesSubmenu.classList.toggle('hidden'); // Show/hide the Tiles submenu
-        tilesArrow.classList.toggle('rotate-90'); // Rotate the arrow when toggled
+    document.getElementById('mobile-close').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('-translate-x-full');  // Close mobile menu
     });
 
-    // Toggle for Nano submenu (click anywhere on the div)
-    subCatDiv.addEventListener('click', () => {
-        tilesSubSubmenu.classList.toggle('hidden'); // Show/hide the Nano submenu
-        subCatArrow.classList.toggle('rotate-90'); // Rotate the Nano arrow
+// Function to handle 'Tiles' submenu toggle
+    document.getElementById('tiles-div').addEventListener('click', function() {
+        const submenu = document.getElementById('tiles-submenu');
+        const arrow = document.getElementById('tiles-arrow');
+
+        // Toggle submenu visibility
+        submenu.classList.toggle('hidden');
+
+        // Rotate the arrow
+        arrow.classList.toggle('rotate-90');
     });
+
+// Function to handle individual tile item (e.g., 'Nano') submenu toggle
+    document.querySelectorAll('.tile-item').forEach(item => {
+        item.addEventListener('click', function(event) {
+            const tileType = this.getAttribute('data-tile');
+            const submenu = document.getElementById(`${tileType}-submenu`);
+            const arrow = document.getElementById(`${tileType}-subcat-arrow`);
+
+            // Toggle submenu visibility
+            submenu.classList.toggle('hidden');
+
+            // Rotate the arrow
+            arrow.classList.toggle('rotate-90');
+
+            // Prevent click from closing parent menus
+            event.stopPropagation();
+        });
+    });
+
+    // // Toggle for Nano submenu (click anywhere on the div)
+    // subCatDiv.addEventListener('click', () => {
+    //     tilesSubSubmenu.classList.toggle('hidden'); // Show/hide the Nano submenu
+    //     subCatArrow.classList.toggle('rotate-90'); // Rotate the Nano arrow
+    // });
 
 
 

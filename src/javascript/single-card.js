@@ -88,7 +88,8 @@ function addStyles() {
 // Initialize everything
 function init() {
     addStyles();
-    createTileCard('onyx-section', '../images/tile1.jpg', 'ONYX', 'Onyx marble is a captivating natural stone that has been prized for centuries for its stunning beauty and unique characteristics. Unlike other types of marble, Onyx is formed from the precipitation of calcium carbonate in cold water solutions, resulting in its distinctive translucent appearance and vibrant color patterns', 'https://tourism.gov.in/sites/default/files/2019-04/dummy-pdf_2.pdf');
+    createTileCard('onyx-section-one', '../images/Single Card/Flora Wave Series.jpg', 'Flora Wave Series', 'The Flora Wave Series offers elegant marble tiles featuring natural wave-like patterns inspired by flowing flora. Perfect for adding a touch of sophistication to any space, these tiles combine durability with aesthetic beauty, making them ideal for both modern and classic interiors. Enhance your space with timeless, nature-inspired design.', 'https://tourism.gov.in/sites/default/files/2019-04/dummy-pdf_2.pdf');
+    createTileCard('onyx-section-two', '../images/Single Card/Full Body 16mm Jumbo Tiles.jpg', 'Full Body 16mm Jumbo Tiles', 'The Full Body 16mm Jumbo Tiles are designed for strength and style, offering a seamless, uniform appearance throughout. These durable, large-format tiles are perfect for high-traffic areas, combining resilience with a sleek, modern look. Ideal for creating expansive, elegant surfaces with minimal grout lines, they offer both beauty and longevity.', 'https://tourism.gov.in/sites/default/files/2019-04/dummy-pdf_2.pdf');
     applyScrollAnimation();
 }
 
